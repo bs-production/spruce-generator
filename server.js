@@ -31,6 +31,9 @@ app.post('/', function(req, res){
 
 //store our template file
 var compiled = ejs.compile(fs.readFileSync('./views/demo.ejs', 'utf8'));
+
+let servicesList = req.body.services
+ 
 //Fill out our templates
 var html = compiled({ 
 	 	 favicon: req.body.favicon,
@@ -62,6 +65,7 @@ var html = compiled({
 	     calloutImgThree: req.body.call3,
 	     calloutLinkThree: req.body.call3link,
 
+	     services: req.body.call3link,
 
 	     facebook: req.body.facebook,
 	     twitter: req.body.twitter,
