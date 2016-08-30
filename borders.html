@@ -1,0 +1,556 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>[[title]]</title>
+    	<meta name="description" content="[[description]]">
+    	<meta name="keywords" content="[[keywords]]">
+    	<meta name="msvalidate.01" content="D1CF2816AA3A80E3A462353DF893C744" />
+    	<link rel="icon" href="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/1362/ALBRIGHT-ROOFING-LOGO.png">'
+    	<link rel="alternate" title="News and Events" href="/feeds.xml" type="application/rss+xml" />
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js" defer></script>
+    	<link rel="stylesheet" type="text/css" href="/core/jquery-ui.css" />
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+    	<link rel="stylesheet" type="text/css" href="/core/v2/jquery-ui-default.css" />
+    	<script src="/core/js/jquery.thScrollable.js" type="text/javascript" defer></script>
+    	<!-- Fonts and icons -->
+    	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    	<!-- ColorBox -->
+    	<script type="text/javascript" src="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/colorbox/jquery.colorbox-min.js" defer></script>
+    	<link rel="stylesheet" type="text/css" href="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/colorbox/colorbox.css" />
+    	<!--End ColorBox-->
+    	<link rel="stylesheet" type="text/css" href="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/toolbox.css" />
+    	<link rel="stylesheet" type="text/css" href="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/inline-widgets.css" />
+    	<link rel="stylesheet" type="text/css" href="/core/v2/sidebar-widgets.css" />
+    	<link rel="stylesheet" type="text/css" href="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/modules.css" />
+    	<link rel="stylesheet" type="text/css" href="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/template.css" />
+    	<link rel="stylesheet" href="/core/v3/foundation.min.css">
+    	<!--Mobile Overrides -->
+    	<link rel="stylesheet" media="screen and (max-width: 960px)" href="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/mobile.css" />
+    	<link rel="stylesheet" href="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/nav.css" />
+    	<link rel="stylesheet" type="text/css" href="/inc/sb-styles.css">
+      <link rel="stylesheet" type="text/css"  href="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/1340/aos.css">
+    </head>
+
+
+    <body>
+        <div id="template-wrap">
+            <div class="container" id="header">
+                <div class="row collapse">
+                    <div class="large-4 columns" id="logo">
+                         <?php echo $logo; ?>
+                    </div>
+                    <div class="large-8 columns" id="phone">
+                        <?php
+                            $iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+                            $android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+                            if($iphone || $android  == true)
+                          {
+                        ?>
+                            <a href="tel:<?php echo $phonenumber; ?>" class="phone_link">
+
+                        <?
+                        }
+                        else
+                        { ?>
+
+                            <a href="/free-estimate.html" class="phone_link">
+                        <?php
+                        }
+                        ?>
+                            <?php
+                                $times = get_open_time();
+                                if($times or isset($_GET['open']))
+                                {
+                                    ?>
+
+                                <div class="opensign"><span>open</span></div>
+
+                            <?php
+                            }
+                                ?>
+
+                            [phone]
+
+                        </a>
+                        <p onclick="location.href='/service-area.html';" style="cursor:pointer;" id="header-service-area">Serving CT
+                        </p>
+                    </div>
+                </div>
+            </div><!-- end #header -->
+
+            <div class="container" id="nav-bar">
+                <div class="row collapse">
+                    <div class="columns top-nav contain-to-grid sticky">
+                        <div class="container show-for-medium-up" id="logo-phone-sticky">
+                            <div class="row">
+                                <div class="columns medium-3">
+                                    <div id="logo-sticky"><a href="/"><a href="/"><img src="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/1362/ALBRIGHT-ROOFING-LOGO.png" alt="[company]" title="[company]" border="0"></a></a></div>
+                                </div>
+                                <div class="columns medium-9">
+                                    <div id="phone-sticky">
+                                        <a class="button" href="/free-estimate.html">Contact us for a <span>Free Quote</span></a>
+                                        <a href="tel:<?php echo $phonenumber; ?>" class="phone_link">[phone]</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><!--end Top Sticky Bar -->
+                            <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: [medium,large]">
+                                <ul class="title-area">
+                                    <!-- Title Area -->
+                                    <li class="name">
+                                    </li>
+                                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                                </ul>
+                                <section class="top-bar-section">
+                                    <!-- Right Nav Section -->
+                                    <ul id="top-nav-list">
+                                        <li class="has-dropdown">
+                                            <a href="#"><span>Services</span></a>
+                                            <ul class="dropdown m-menu">
+                                                <li><div class="row">
+                                                    <div class="columns">
+                                                        [[top_silos]]
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            </ul><!-- end .m-menu -->
+                                            </li><!-- end SERVICES mega nav -->
+                                            <li class="has-dropdown">
+                                                <a href="#"><span>Our Work</span></a>
+                                                <ul class="dropdown m-menu short">
+                                                    <li>
+                                                        <div class="row">
+                                                            <div class="columns">
+                                                                <ul class="m-menu-ul">
+                                                                    <li><a href="/about-us/photo-gallery.html">Photo Gallery</a></li>
+                                                                    <li><a href="/about-us/before-after.html">Before &amp; After</a></li>
+                                                                    <li><a href="/about-us/testimonials.html">Testimonials</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li onclick="location.href='/about-us/financing.html';" style="cursor:pointer;"><a href="/about-us/financing.html"><span>Financing</span></a></li>
+                                            <!-- <li onclick="location.href='/about-us/reviews.html';" style="cursor:pointer;"><a href="/about-us/reviews.html"><span>Customer Reviews</span></a></li> -->
+                                            <li onclick="location.href='/service-area.html';" style="cursor:pointer;"><a href="/service-area.html"><span>Service Area</span></a></li>
+                                            <li onclick="location.href='/about-us.html';" style="cursor:pointer;"><a href="/about-us.html"><span>About Us</span></a></li>
+
+
+                                        </ul>
+                                    </section>
+                                    </nav><!-- END Nav -->
+                                </div>
+                            </div>
+                        </div><!-- End #nav-bar -->
+
+
+                        <?php if ($thePage == "index") { ?>
+
+                        <div class="container" id="main-message">
+                            <div class="row">
+                              <div class="columns hero-txt main-txt">
+                                <p>OUR ROOFING GOES ABOVE AND BEYOND <span>Quality roof repair and replacement in Greater Pinellas County</span></p>
+                                <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
+                              </div>
+
+                            </div>
+                        </div><!-- /#main-message -->
+
+                        <div class="container" id="services">
+                            <div class="row service-icons">
+                           
+                            </div>
+                        </div><!-- /#services -->
+
+                        <div class="container home" id="choose-us">
+                                <div class="row">
+                                    <div class="columns">
+                                        <h2>WHY GREATER PINELLAS COUNTY HOMEOWNERS CHOOSE US</h2>
+                                    </div>
+                                </div>
+                                <div class="row choose-wrap">
+                                    <div class="medium-6 large-3 columns">
+                                        <div class="choose-item"><i class="fa fa-truck" aria-hidden="true"></i><p>Over 20 years of experience across Greater Pinellas County</p></div>
+                                    </div>
+                                    <div class="medium-6 large-3 columns">
+                                        <div class="choose-item"><i class="fa fa-trophy" aria-hidden="true"></i><p>Over 20 years of experience across Greater Pinellas County</p></div>
+                                    </div>
+                                    <div class="medium-6 large-3 columns">
+                                        <div class="choose-item"><i class="fa fa-users" aria-hidden="true"></i><p>Over 20 years of experience across Greater Pinellas County</p></div>
+                                    </div>
+                                    <div class="medium-6 large-3 columns">
+                                        <div class="choose-item"><i class="fa fa-file-text" aria-hidden="true"></i><p><a href="/free-estimate.html">Over 20 years of experience across Greater Pinellas County</a></p></div>
+                                    </div>
+                                </div>
+                            </div>   <!-- end #choose-us -->
+
+                        <div class="container home" id="widgets">
+                            <div class="row">
+                                <div class="columns"><h2>Recent Projects in [territory]</h2></div>
+                            </div>
+
+                                <?php
+                                $meta = array();
+                                $meta['useGeo'] = true;
+                                $meta['manualAssetPage'] = false;
+                                $meta['useFeatured'] = true;
+                                $meta['siloMode'] = false;
+                                $meta['qty'] = 3;
+                                $templates = array();
+                                $templates['main'] = array('
+                                    <div class="row" id="widget-slider">
+                                            [[items]]
+                                    </div>
+                                    <div class="row">
+                                        <div class="columns">
+                                            <p class="more-assets"><a href="[[moreurl]]" title="View All Before & After photos">View All Before &amp; After photos</a></p>
+                                        </div>
+                                    </div>
+                                ');
+                                $templates['item'] = array('
+                                <div class="widget-item">
+                                    <div  class="tabs_[[num]]">
+                                        <div class="medium-5 medium-offset-1 large-6 large-offset-0 columns">
+                                            <div class="widget-img">
+                                                <img src="http://img1.teambasementsystems.com/uploads/before_after/700_525/[[company_id]]/[[before-photo]]" alt="[[alt]]" />
+                                                <span>Before</span>
+                                            </div>
+                                        </div>
+                                         <div class="medium-5 large-6 columns">
+                                            <div class="widget-img">
+                                                <img src="http://img1.teambasementsystems.com/uploads/before_after/700_525/[[company_id]]/[[after-photo]]" alt="[[alt]]" />
+                                                <span>After</span>
+                                            </div>
+                                         </div>
+                                        <h3>[[title]]</h3>
+                                        <p>[[text-full]]</p>
+                                    </div>
+                                </div>
+                                    ');
+                                $title = 'BA';
+                                require_once('widgets/before_after_sidebar_widget.php');
+                                echo($output);
+                                ?>
+
+                        </div><!-- end #widgets.container -->
+
+    <hr style="margin: 1.25rem 5rem;">
+          <div class="container" id="page-wrap">
+              <div class="row">
+                  <div class="columns homepage-content" id="content-wrap">
+
+                  <?php
+                  }
+                  elseif (stristr($thePage,"free-estimate"))
+                  {
+                  ?>
+                  <div class="container" id="page-wrap">
+                      <div class="row">
+                          <div class="columns free-estimate" id="content-wrap">
+
+                  <?php
+                  }
+                  else
+                  {
+                  ?>
+                  <?php
+                  if (stristr($thePage,"about-us"))
+                  {
+                  ?>
+                      <div id="about" class="silo-page-wrap">
+
+                  <?php
+                  }
+                  elseif (stristr($thePage,"spray-foam-insulation"))
+                  {
+                  ?>
+                      <div id="spray-foam" class="silo-page-wrap">
+                  <?php
+                  }
+                  elseif (stristr($thePage,"attic-insulation"))
+                  {
+                  ?>
+                      <div id="attic-insulation" class="silo-page-wrap">
+                  <?php
+                  }
+                  elseif (stristr($thePage,"ice-damming"))
+                  {
+                  ?>
+                      <div id="ice-damming" class="silo-page-wrap">
+                  <?php
+                  }
+                  elseif (stristr($thePage,"crawl-space-insulation"))
+                  {
+                  ?>
+                      <div id="crawl-space-insulation" class="silo-page-wrap">
+                  <?php
+                  }
+                  elseif (stristr($thePage,"home-insulation"))
+                  {
+                  ?>
+                      <div id="home-insulation" class="silo-page-wrap">
+
+                  <?php
+                  }
+                  elseif (stristr($thePage,"windows-doors"))
+                  {
+                  ?>
+                      <div id="windows-doors" class="silo-page-wrap">
+                  <?php
+                  }
+                  elseif (stristr($thePage,"indoor-air-quality"))
+                  {
+                  ?>
+                      <div id="indoor-air-quality" class="silo-page-wrap">
+                  <?php
+                  }
+                  elseif (stristr($thePage,"home-energy-evaluation"))
+                  {
+                  ?>
+                      <div id="home-energy-evaluation" class="silo-page-wrap">
+
+                  <?php
+                  }
+                  elseif (stristr($thePage,"roof-repair"))
+                  {
+                  ?>
+                  <div id="roof-repair" class="silo-page-wrap">
+
+                    <?php
+                    }
+                    elseif (stristr($thePage,"roof-replacement"))
+                    {
+                    ?>
+                  <div id="roof-replacement" class="silo-page-wrap">
+                  <?php
+                  }
+                  elseif (stristr($thePage,"commercial-roofing"))
+                  {
+                  ?>
+                  <div id="commercial-roofing" class="silo-page-wrap">
+
+                    <?php
+                    }
+                    elseif (stristr($thePage,"gutters-and-downspouts"))
+                    {
+                    ?>
+                    <div id="gutters-and-downspouts" class="silo-page-wrap">
+                    <?php
+                    }
+                    elseif (stristr($thePage,"siding"))
+                    {
+                    ?>
+                  <div id="siding" class="silo-page-wrap">
+                    <?php
+                    }
+                    elseif (stristr($thePage,"windows-doors"))
+                    {
+                    ?>
+                  <div id="windows-doors" class="silo-page-wrap">
+                    <?php
+                    }
+                    elseif (stristr($thePage,"remodeling"))
+                    {
+                    ?>
+                  <div id="remodeling" class="silo-page-wrap">
+
+                  <?php
+                  }
+                  elseif (stristr($thePage,"service-area"))
+                  {
+                  ?>
+                  <div id="territory" class="silo-page-wrap">
+
+                  <?php
+                  }
+                  else
+                  {
+                  ?>
+                      <div id="about" class="silo-page-wrap">
+
+                  <?php
+                  }
+                  ?>
+                  <div class="container" id="silo-header">
+                      <div class="row">
+                          <div class="columns">
+                              <span class="page-title"><?php echo $cmsPageData['page.name']; ?></span>
+                          </div>
+                      </div>
+                  </div><!-- end #silo-header -->
+                  <div class="container" id="page-wrap" data-equalizer>
+                      <div class="row">
+                          <div class="medium-9 medium-push-3 columns body" id="content-wrap" data-equalizer-watch>
+                              <?php
+                              }
+                              ?>
+                              [[content]]
+                          </div>
+                          <div class="medium-3 medium-pull-9 columns" id="subnav-left" data-equalizer-watch>
+                              [[single_silo_nav]]
+                          </div>
+                      </div>
+                  </div>
+
+                  <?php if (($thePage != "free-estimate")&&($thePage != "index")) { ?>
+                      </div><!-- end #silo-page-wrap -->
+                  <?php
+                          }
+                          ?>
+
+                  <?php if (($thePage == "index")) { ?>
+
+                  <div class="container" id="hp-features">
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <div class="feature-item" data-aos="fade-right">
+                                <a href="2">
+                                  <img src="1" style="margin-bottom: 18px;"></a>
+                            </div>
+                        </div>
+                        <div class="medium-4 columns">
+                          <div class="feature-item" data-aos="zoom-in">
+                              <a href="2">
+                                <img src="1"></a>
+                          </div>
+                        </div>
+                            <div class="medium-4 columns">
+                                <div class="feature-item" data-aos="fade-left">
+                                    <a href="2">
+                                      <img src="1"></a>
+                                </div>
+                            </div>
+                    </div>
+                  </div>
+
+                  <?php
+                  }
+                  ?>
+
+                  <?php if (($thePage != "service-area")) { ?>
+
+                  <div class="container home" id="service-area">
+                      <div class="row">
+                          <div class="large-5 columns">
+                              <div id="home-city-list">
+                                  <h2>our service area</h2>
+                                  [[city_scroll:100]]
+                              </div>
+                          </div>
+                          <div class="large-7 columns service-map">
+                              <div id="gmap-wrap" onclick="location.href='/service-area.html';" style="cursor:pointer;">[[service_area_google_map]]</div>
+                          </div>
+                      </div>
+                  </div><!-- end #service-area -->
+
+                  <?php
+                  }
+                  ?>
+
+                  <?php if (($thePage == "index")) { ?>
+
+                  <div class="container" id="cred">
+                      <div class="row">
+                          <div class="small-6 medium-3 columns" data-aos="fade-right">
+                                <span><img src="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/1362/Atlas.jpg"></span>
+                            </div>
+                            <div class="small-6 medium-3 columns" data-aos="zoom-in">
+                                <span><img src="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/1362/Atlas.jpg"></span>
+                            </div>
+                            <div class="small-6 medium-3 columns" data-aos="zoom-in">
+                                <span><img src="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/1362/Atlas.jpg"></span>
+                            </div>
+                            <div class="small-6 medium-3 columns" data-aos="fade-left">
+                                <span><img src="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/1362/Atlas.jpg"></span>
+                            </div>
+                      </div>
+                  </div><!-- end credibility -->
+
+                  <?php
+                  }
+                  ?>
+
+        <div class="container home" id="footer">
+            <div class="row" data-equalizer>
+                <div class="large-7 large-push-5 columns" data-equalizer-watch>
+                    <div id="footer-links">
+                      <?php
+                      $superNav = new nav();
+                      $superNav->superMode = 'bottom';
+                      echo $superNav->generateSuperMarkup();
+                      ?>
+                        <a href="0" target="_blank" title="Like Us on Facebook">
+                        <img src="/core/images/templates/health/fb-icon-light.png" alt="Facebook"></a>
+                        <a href="0" target="_blank" title="Follow Us on Twitter">
+                        <img src="/core/images/templates/health/tw-icon-light.png" alt="Twitter"></a>
+                        <a href="0" target="_blank" title="Add us on Google+">
+                        <img src="/core/images/templates/health/goog-icon-light.png"></a>
+                        <a href="0" target="_blank" title="Share on LinkedIn">
+                        <img src="/core/images/templates/health/linkedin-icon.png" alt="LinkedIn"></a>
+                        <a href="" target="_blank" title="Subscribe to us on YouTube">
+                        <img src="/core/images/templates/health/yt-icon-light.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="large-5 large-pull-7 columns" data-equalizer-watch>
+                    <div id="footer-contact">
+                        <a href="/free-estimate.html" id="footer-btn">get a free quote</a>
+                        <p class="footer-phone">
+                          Or call us at
+                            <span><a href="tel:<?php echo $phonenumber; ?>" class="phone_link">[phone]</a></span>
+                        </p>
+                        <p class="footer-address">
+                            &copy; <?php echo(date('Y')); ?> [[company]]<br>
+                            [[address street]]<br>
+                        [[address city]], [[address state]] [[address zip]]</p>
+                          <p>
+                            Contractor ID: [license number]
+                          </p>
+                          <p><a href="https://www.contractornation.com/homeowners.php" target="_blank">
+                            <img src="/core/images/universal/contractor-nation-badge.png"></a>
+                          </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a id="scrollToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i>Top</a>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+<script src="http://b388022801b3244fdbae-c913073b3759fb31d6b728a919676eab.r15.cf1.rackcdn.com/v3/template.js"></script>
+<script src="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/1340/aos.js"></script>
+<script>
+AOS.init({
+  disable: 'mobile',
+  offset: 200,
+  duration: 600,
+  easing: 'easeInOutBack',
+  delay: 100,
+});
+ </script>
+ <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+
+ <script>
+  $('#widget-slider').slick({
+     autoplay: false,
+     dots: true,
+     infinite: true,
+     speed: 500,
+     fade: false,
+     cssEase: 'ease',
+     responsive: [
+         {
+           breakpoint: 640,
+           settings: {
+             arrows: false
+           }
+         }
+     ]
+ });
+ </script>
+    </body>
+</html>
