@@ -29,10 +29,43 @@ app.get("/", function (request, response) {
 //Once you fill out the form start processing our data and making our files
 app.post('/', function(req, res){
 
+
+//Items Checked 
+var servicesList = req.body.services;
+
+// // all of our services data 
+// var list = [{
+//     sName:"Basement Finishing",
+//     sFile: "<div class=\"small-12 medium-3 columns\"> <div class=\"service-item\"><a href=\"/basement-finishing.html\" title=\"Basement Finishing in [territory], [major cities 3]\" alt=\"Basement Finishing in [territory], [major cities 3]\"><img src=\"http://placehold.it/150x150\"><h2>Basement Finishing</h2></a><p>Gain extra living space in your home with a custom-designed finished basement.</p></div> </div>"
+// },
+// {
+//     sName:"Roofing",
+//     sFile:"Thomas"
+// },
+// {
+//     sName:"B",
+//     sFile:"James"
+// }];
+
+
+
+
+// //Loop through services to see if we have a match
+// for(var i = 0; i < list.length; i++) { 
+
+// 	console.log(list[i]);
+
+//  for (var j = 0; j < servicesList.length; j++) {
+//         if (list[i] == servicesList[j]) {
+          
+//         }
+//     }
+
+
+// }
+
 //store our template file
 var compiled = ejs.compile(fs.readFileSync('./views/demo.ejs', 'utf8'));
-
-let servicesList = req.body.services
  
 //Fill out our templates
 var html = compiled({ 
@@ -64,8 +97,8 @@ var html = compiled({
 
 	     calloutImgThree: req.body.call3,
 	     calloutLinkThree: req.body.call3link,
-
-	     services: req.body.call3link,
+	     
+	     services: servicesList,
 
 	     facebook: req.body.facebook,
 	     twitter: req.body.twitter,
