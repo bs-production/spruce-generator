@@ -182,7 +182,7 @@ fs.writeFileSync("borders.html", html);
 
 //Lets play with our CSS File 
 
-var compiled = ejs.compile(fs.readFileSync('./views/template.css', 'utf8'));
+var compiledCSS = ejs.compile(fs.readFileSync('./views/template.css', 'utf8'));
 var css = compiled({ 
 		 logo: req.body.stickylogo,
 		 mainMessageImage: req.body.mmimage,
