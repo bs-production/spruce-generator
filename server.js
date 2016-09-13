@@ -184,9 +184,9 @@ fs.writeFileSync("borders.html", html);
 
 var compiledCSS = ejs.compile(fs.readFileSync('./views/template.css', 'utf8'));
 var css = compiledCSS({ 
-	logo: req.body.stickylogo,
-	mainMessageImage: req.body.mmimage,
-	whyChooseImage: req.body.whyimage,
+	logo: req.body.logo,
+	mainMessageImage: req.body.mainMessageImage,
+	whyChooseImage: req.body.whyChooseImage,
 	primaryDarkColor: req.body.primaryDarkColor,
 	primaryBrightColor: req.body.primaryBrightColor
 });
