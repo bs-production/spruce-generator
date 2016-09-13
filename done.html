@@ -8,8 +8,39 @@
     </head>
 
     <body> 
-       <h1>Thanks For Playing</h1>
+         <h1>Thanks For Playing</h1>
        <p>Here Is Your File <a href="borders.html" download>Borders</a>  <br> 
-       <a href="template.css" download>template.css</a>
+       <a href="template.css" download>template.css</a> <br> 
+
+
+        <br> 
+        <br> 
+          <label>Borders</label>
+     	  <textarea id="borders"></textarea>
+     	   <label>CSS</label>
+     	  <textarea id="css"></textarea>
+	       <script>
+	       $.ajax({
+				    url: "/borders.html",
+				    type: "GET",
+				    success: function(response) {
+				    	$('#borders').val(response);	
+				    },
+				    error: function(xhr) {
+
+				    }
+				});
+
+	      	 $.ajax({
+				    url: "/template.css",
+				    type: "GET",
+				    success: function(response) {
+				    	$('#css').val(response);	
+				    },
+				    error: function(xhr) {
+
+				    }
+				});
+			</script>
     </body>
 </html>
