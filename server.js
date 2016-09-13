@@ -179,8 +179,25 @@ var html = compiled({
 // Compile our EJS into a HTML file
 fs.writeFileSync("borders.html", html);
 
-	// Send user to a new file where they can grab there goodies 
-	res.sendFile(__dirname + '/done.html');
+
+//Lets play with our CSS File 
+
+var compiled = ejs.compile(fs.readFileSync('./views/template.css', 'utf8'));
+var css = compiled({ 
+		 logo: req.body.stickylogo,
+		 mainMessageImage: req.body.mmimage,
+		 whyChooseImage: req.body.whyimage,
+	 	 primaryDarkColor: req.body.primaryDarkColor,
+	     primaryBrightColor: req.body.primaryBrightColor
+
+});
+
+fs.writeFileSync("template.css", css);
+
+// Send user to a new file where they can grab there goodies 
+res.sendFile(__dirname + '/done.html');
+
+
 });
 
 app.listen(app.get('port'), function() {
