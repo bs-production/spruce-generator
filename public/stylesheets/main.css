@@ -1,36 +1,62 @@
+.container {
+  background-color: #54655b;
+  background-image: url("https://www.transparenttextures.com/patterns/shley-tree-2.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-attachment: fixed;
+}
+
+
+.why-choose {
+  margin-bottom: 34px;
+}
 form h3 {
   font-size: 28px;
   color: #54655B;
   font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+form p {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #545454;
 }
 .form-styles {
-  background: #EBF0ED;
+  background: rgba(235, 240, 237, 0.85);
   padding: 50px;
   border-radius: 20px;
   margin-bottom: 40px;
-  box-shadow: 1px 3px 7px #C5C5C5;
+  box-shadow: 1px 3px 7px #000;
+
 }
 .form-container {
   width: 960px;
 }
-div#spruce {
-  background: url('http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/694/spruce-leaf.jpg') no-repeat -23px 30px;
-  background-size: 150px;
-  text-align: center;
+.why-choose label {
+  font-weight: bold;
+  color: #545454;
+  font-size: 15px;
 }
 .header {
-margin: 0px 0 70px 0px;
+  margin: 0px 0 50px 0px;
+  padding-top: 60px;
+  text-align: center;
+}
+.header img {
+  margin-bottom: 36px;
 }
 .header h1 {
-  font-size: 49px;
+  font-family: 'Pattaya', sans-serif;
+  font-size: 60px;
   margin: 0;
   line-height: 100%;
   font-weight: bold;
-  color: #54655b;
-  padding-top: 83px;
+  color: #fff;
 }
+
 .header h4 {
-  color: #000;
+  color: #98C6AB;
   padding-top: 3px;
   font-size: 25px;
   font-style: italic;
@@ -54,4 +80,40 @@ margin: 0px 0 70px 0px;
 }
 .done-bkg {
   background: #EBF0ED;
+}
+
+/*Checkbox styles*/
+.checkbox-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom, .checkbox-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox-custom-label {
+    position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    background: #54655B;
+    box-shadow: inset 0px 0px 0px 4px #fff;
 }
