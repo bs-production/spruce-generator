@@ -4,47 +4,122 @@
     <head>
         <title>My Title</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
- 
+        <link rel="stylesheet" type="text/css" href="public/stylesheets/main.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.css" />
+        <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
 
-    <body> 
-         <h1>Thanks For Playing</h1>
-         
-         <iframe src="//giphy.com/embed/3orif07xXu0wMaS4Ba" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/season-17-the-simpsons-17x9-3orif07xXu0wMaS4Ba">via GIPHY</a></p>
-         
-         
-       <p>Here Is Your File <a href="borders.html" download>Borders</a>  <br> 
-       <a href="template.css" download>template.css</a> <br> 
+    <body>
+      <div class="container">
+
+          <div class="header small-5 small-centered columns">
+            <img src="http://images.treehouseinternetgroup.com/687/white-logo-190.png" alt="" />
+              <h3>Spruce Template Generator</h3>
+                 <iframe src="//giphy.com/embed/3orif07xXu0wMaS4Ba" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+
+          <div class="row collapse">
+            <div class=" code-tabs small-11 small-centered columns">
+            <ul class="tabs" data-tabs id="example-tabs">
+              <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">borders.php</a>
+                </li>
+
+              <li class="tabs-title"><a href="#panel2">template.css</a>
+                  </li>
+            </ul>
+
+              <div class="tabs-content" data-tabs-content="example-tabs">
+
+                <div class="tabs-panel is-active" id="panel1">
+                  <div id="clipboard">
+                  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#borders"><img src="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/745/Octicons-clippy_white_2.png" alt="" /></button>
+                  &nbsp;<span class="copied">Copied borders.php!</span>
+
+                  <textarea id="borders"></textarea>
+                </div>
+                </div>
+
+                <div class="tabs-panel" id="panel2">
+                  <div id="clipboard">
+                  <button class="btn-two" data-clipboard-action="copy" data-clipboard-target="#css"><img src="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/745/Octicons-clippy_white_2.png" alt="" /></button>
+                  &nbsp;<span class="copied">Copied template.css!</span>
+                  <textarea id="css"></textarea>
+                </div>
+
+              </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="downloads small-5 small-centered columns">
+
+                         <p>Here is your file: <a href="borders.html" download><span>borders.php</a></span></p>
+                         <p>Here is your file: <a href="template.css" download><span>template.css</a></span></p>
+
+                      </div>
+                    </div> -->
+
+       </div>
 
 
-        <br> 
-        <br> 
-          <label>Borders</label>
-     	  <textarea id="borders"></textarea>
-     	   <label>CSS</label>
-     	  <textarea id="css"></textarea>
-	       <script>
-	       $.ajax({
-				    url: "/borders.html",
-				    type: "GET",
-				    success: function(response) {
-				    	$('#borders').val(response);	
-				    },
-				    error: function(xhr) {
 
-				    }
-				});
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+      <script>
+        var clipboard = new Clipboard('.btn');
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
 
-	      	 $.ajax({
-				    url: "/template.css",
-				    type: "GET",
-				    success: function(response) {
-				    	$('#css').val(response);	
-				    },
-				    error: function(xhr) {
+        var clipboardTwo = new Clipboard('.btn-two');
+        clipboardTwo.on('success', function(e) {
+            console.log(e);
+        });
+        clipboardTwo.on('error', function(e) {
+            console.log(e);
+        });
 
-				    }
-				});
-			</script>
+        clipboard.on('success', function(e) {
+        $('.copied').show();
+    		$('.copied').fadeOut(2000);
+        });
+        clipboardTwo.on('success', function(e) {
+        $('.copied').show();
+        $('.copied').fadeOut(2000);
+        });
+      </script>
+
+
+         <script>
+         $.ajax({
+    		    url: "/borders.html",
+    		    type: "GET",
+    		    success: function(response) {
+    		    	$('#borders').val(response);
+    		    },
+    		    error: function(xhr) {
+    		    }
+    		});
+
+        	 $.ajax({
+    		    url: "/template.css",
+    		    type: "GET",
+    		    success: function(response) {
+    		    	$('#css').val(response);
+    		    },
+    		    error: function(xhr) {
+
+    		    }
+    		});
+    	  </script>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js" charset="utf-8"></script>
+
+      <script>
+        $(document).foundation();
+      </script>
+
     </body>
 </html>
