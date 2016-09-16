@@ -167,7 +167,7 @@ form p {
   color: #54655B;
 }
 .code-tabs textarea {
-  height: 800px;
+  height: 1000px;
   margin-top: 20px;
   font-family: "Courier New", Courier, monospace;
   font-size: 14px;
@@ -199,4 +199,23 @@ form p {
 	color: #fff;
 	display: none;
   font-family: 'Roboto', sans-serif;
+}
+.clip-svg {
+  margin-left: 10px;
+}
+.clip-svg-color {
+  fill: #fff;
+}
+.download-svg {
+  height: 20px;
+  margin-left: 30px;
+}
+.download-svg-color {
+  fill: #fff;
+}
+.footer {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
 }

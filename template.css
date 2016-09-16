@@ -20,7 +20,7 @@ a,
 #tabs .ui-state-active a,
 #tabs .ui-state-active a:link,
 #tabs-light-bar .ui-widget-content a {
-    color: blue;
+    color: ;
 }
 a:visited {
     color: #222;
@@ -40,7 +40,7 @@ a#scrollToTop .fa {
     margin-right: 10px;
 }
 a:hover {
-  color: red;
+  color: ;
 }
 /**------------------------------------------- Font Styles -------------------------------------------**/
 
@@ -50,14 +50,14 @@ p,
 ul,
 ol {
     font-family: sans-serif;
-    color: red;
+    color: ;
 }
 h1,
 h3,
 h4,
 strong {
     font-family: sans-serif;
-    color: blue;
+    color: ;
 }
 #content-wrap h1 {
     font-size: 40px;
@@ -86,7 +86,7 @@ strong {
     margin-bottom: 15px;
 }
 #content-wrap h4 {
-    color: red;
+    color: ;
     font-family: sans-serif;
     font-size: 20px;
 }
@@ -112,7 +112,7 @@ strong {
 }
 /**------------------------------------------- Header -------------------------------------------*/
 #phone-sticky a.phone_link span, #phone-sticky a.phone_link:hover span {
-  color: blue;
+  color: ;
 }
 #header {
     background-color: #fff;
@@ -124,7 +124,7 @@ strong {
     position: relative;
 }
 #phone > a {
-    color: blue !important;
+    color:  !important;
     line-height: 100%;
     font-weight: bold;
     font-size: 40px;
@@ -137,11 +137,11 @@ p#header-service-area {
     margin-bottom: 0px;
 }
 p#header-service-area:hover {
-      color: blue;
+      color: ;
 }
 .opensign {
     float: left;
-    background: blue;
+    background: ;
     border-radius: 7px;
     padding: 5px;
 }
@@ -220,11 +220,11 @@ p#header-service-area:hover {
 /**------------------------------------------- TOP Nav Styles -------------------------------------------**/
 #nav-bar,
 .contain-to-grid {
-    background: red;
+    background: ;
 }
 
 ul#top-nav-list > li:hover {
-    background: blue;
+    background: ;
 }
 /* Top Nav Links */
 ul#top-nav-list > li a {
@@ -243,7 +243,7 @@ ul#top-nav-list > li.quote {
     background: #EDEDED;
 }
 ul#top-nav-list > li.quote a {
-    color: blue;
+    color: ;
 }
 ul#top-nav-list > li.quote:hover {
     background-color: #EB0209;
@@ -254,7 +254,7 @@ ul#top-nav-list ul.m-menu a {
     color: #353535;
 }
 ul#top-nav-list ul.m-menu ul a:hover {
-    color: blue;
+    color: ;
     text-decoration: none !important;
 }
 
@@ -264,10 +264,10 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 
 #phone-sticky a.button {
-    background: blue;
+    background: ;
 }
 #phone-sticky a.button:hover {
-    background: red;
+    background: ;
 }
 .button:visited {
     color: #fff;
@@ -285,8 +285,8 @@ ul#top-nav-list ul.m-menu ul a:hover {
   background-size: 100%;
   background-position: center 0;
   text-align: center;
-  border-top: 4px solid blue;
-  border-bottom: 5px solid red;
+  border-top: 4px solid ;
+  border-bottom: 5px solid ;
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -323,7 +323,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
   color: #fff;
 }
 .cta-button {
-  background-color: blue;
+  background-color: ;
   text-transform: uppercase;
   padding: 22px 20px 19px 20px;
   color: #fff;
@@ -384,7 +384,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
     font-size: 24px;
     margin-top: 10px;
     margin-bottom: 0;
-    color: blue;
+    color: ;
 }
 .service-item p {
     font-size: 18px;
@@ -400,7 +400,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
     transition: box-shadow 200ms ease-out;
 }
 .service-icons a img:hover {
-    box-shadow: 0 0px 0px 5px blue;
+    box-shadow: 0 0px 0px 5px ;
 }
 @media screen and (max-width: 640px){
     #services {
@@ -457,7 +457,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 #choose-us div.choose-item i.fa {
     font-size: 50px;
-    color: blue;
+    color: ;
     margin-bottom: 20px;
 }
 #choose-us div.choose-item p {
@@ -494,7 +494,7 @@ p.more-assets {
 p.more-assets a {
     text-transform: uppercase;
     font-size: 14px;
-    color: blue;
+    color: ;
     text-decoration: none !important;
     letter-spacing: .025em;
     transition: color .2s ease;
@@ -525,7 +525,7 @@ p.more-assets a:hover {
 }
 
 #widgets a {
-    color: blue;
+    color: ;
     text-decoration: underline;
 }
 
@@ -558,7 +558,7 @@ p.more-assets a:hover {
     z-index: 1;
     color: #fff;
     font: bold 20px/20px sans-serif;
-    background: red;
+    background: ;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
     padding: 10px 15px;
     top: -10px;
@@ -867,7 +867,7 @@ button.slick-next {
 }
 #home-city-list h3 a,
 .city_scroll_list a {
-    color: blue;
+    color: ;
     text-decoration: underline;
 }
 .city_scroll_list_content {
@@ -889,7 +889,7 @@ button.slick-next {
 }
 .city_scroll_list li {
     font: 14px/1.2em sans-serif;
-    color: red;
+    color: ;
     display: inline-block;
 }
 .city_scroll_list li:not(:last-of-type)::after {
@@ -965,7 +965,7 @@ button.slick-next {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid ;
 }
 @media screen and (max-width: 640px) {
     #silo-header {
@@ -975,7 +975,7 @@ button.slick-next {
 #silo-header::before {
     content: "";
     display: block;
-    background: red;
+    background: ;
     opacity: .8;
     width: 100%;
     height: 100%;
@@ -1094,7 +1094,7 @@ button.slick-next {
 /* Nav styles - first level - excludes top silo page */
 
 #subnav-left > ul > li > ul {
-    border-top: 1px solid red;
+    border-top: 1px solid ;
     padding-top: 20px;
 }
 #subnav-left > ul ul li a {
@@ -1210,7 +1210,7 @@ button.slick-next {
 }
 a.button,
 a.arrow-button {
-    background: blue;
+    background: ;
     text-shadow: none;
     font: bold 20px/1.3em sans-serif;
     border: 0;
@@ -1219,7 +1219,7 @@ a.arrow-button {
 }
 a.button:hover,
 a.arrow-button:hover {
-    background: red;
+    background: ;
 }
 a.arrow-button {
     padding: 10px 70px 10px 20px !important;
