@@ -20,7 +20,7 @@ a,
 #tabs .ui-state-active a,
 #tabs .ui-state-active a:link,
 #tabs-light-bar .ui-widget-content a {
-    color: ;
+    color: dfsad;
 }
 a:visited {
     color: #222;
@@ -57,7 +57,7 @@ h3,
 h4,
 strong {
     font-family: sans-serif;
-    color: ;
+    color: dfsad;
 }
 #content-wrap h1 {
     font-size: 40px;
@@ -112,7 +112,7 @@ strong {
 }
 /**------------------------------------------- Header -------------------------------------------*/
 #phone-sticky a.phone_link span, #phone-sticky a.phone_link:hover span {
-  color: ;
+  color: dfsad;
 }
 #header {
     background-color: #fff;
@@ -124,7 +124,7 @@ strong {
     position: relative;
 }
 #phone > a {
-    color:  !important;
+    color: dfsad !important;
     line-height: 100%;
     font-weight: bold;
     font-size: 40px;
@@ -137,11 +137,11 @@ p#header-service-area {
     margin-bottom: 0px;
 }
 p#header-service-area:hover {
-      color: ;
+      color: dfsad;
 }
 .opensign {
     float: left;
-    background: ;
+    background: dfsad;
     border-radius: 7px;
     padding: 5px;
 }
@@ -224,7 +224,7 @@ p#header-service-area:hover {
 }
 
 ul#top-nav-list > li:hover {
-    background: ;
+    background: dfsad;
 }
 /* Top Nav Links */
 ul#top-nav-list > li a {
@@ -243,7 +243,7 @@ ul#top-nav-list > li.quote {
     background: #EDEDED;
 }
 ul#top-nav-list > li.quote a {
-    color: ;
+    color: dfsad;
 }
 ul#top-nav-list > li.quote:hover {
     background-color: #EB0209;
@@ -254,7 +254,7 @@ ul#top-nav-list ul.m-menu a {
     color: #353535;
 }
 ul#top-nav-list ul.m-menu ul a:hover {
-    color: ;
+    color: dfsad;
     text-decoration: none !important;
 }
 
@@ -264,7 +264,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 
 #phone-sticky a.button {
-    background: ;
+    background: dfsad;
 }
 #phone-sticky a.button:hover {
     background: ;
@@ -285,7 +285,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
   background-size: 100%;
   background-position: center 0;
   text-align: center;
-  border-top: 4px solid ;
+  border-top: 4px solid dfsad;
   border-bottom: 5px solid ;
   background-attachment: fixed;
   overflow: hidden;
@@ -323,7 +323,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
   color: #fff;
 }
 .cta-button {
-  background-color: ;
+  background-color: dfsad;
   text-transform: uppercase;
   padding: 22px 20px 19px 20px;
   color: #fff;
@@ -384,7 +384,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
     font-size: 24px;
     margin-top: 10px;
     margin-bottom: 0;
-    color: ;
+    color: dfsad;
 }
 .service-item p {
     font-size: 18px;
@@ -400,7 +400,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
     transition: box-shadow 200ms ease-out;
 }
 .service-icons a img:hover {
-    box-shadow: 0 0px 0px 5px ;
+    box-shadow: 0 0px 0px 5px dfsad;
 }
 @media screen and (max-width: 640px){
     #services {
@@ -457,7 +457,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 #choose-us div.choose-item i.fa {
     font-size: 50px;
-    color: ;
+    color: dfsad;
     margin-bottom: 20px;
 }
 #choose-us div.choose-item p {
@@ -494,7 +494,7 @@ p.more-assets {
 p.more-assets a {
     text-transform: uppercase;
     font-size: 14px;
-    color: ;
+    color: dfsad;
     text-decoration: none !important;
     letter-spacing: .025em;
     transition: color .2s ease;
@@ -525,7 +525,7 @@ p.more-assets a:hover {
 }
 
 #widgets a {
-    color: ;
+    color: dfsad;
     text-decoration: underline;
 }
 
@@ -867,7 +867,7 @@ button.slick-next {
 }
 #home-city-list h3 a,
 .city_scroll_list a {
-    color: ;
+    color: dfsad;
     text-decoration: underline;
 }
 .city_scroll_list_content {
@@ -1210,7 +1210,7 @@ button.slick-next {
 }
 a.button,
 a.arrow-button {
-    background: ;
+    background: dfsad;
     text-shadow: none;
     font: bold 20px/1.3em sans-serif;
     border: 0;

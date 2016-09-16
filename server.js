@@ -120,14 +120,12 @@ var list = [{
  var serviceMark = [];
 
 // //Loop through services to see if we have a match with what the user checked.
-var newStr = '';
 for(var i = 0; i < list.length; i++) {
 	 	for (var j = 0; j < servicesList.length; j++) {
 	        if (list[i].sName == servicesList[j]) {
 				serviceMark.push(list[i].sFile);
 	        }
 	    }
-      return false;
 }
 
 //Make Sure Data Is Correct
