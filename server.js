@@ -1,4 +1,4 @@
-var express = require('express');  
+var express = require('express');
 var app = express();
 var fs = require('fs');
 var path = require('path');
@@ -14,13 +14,13 @@ app.set('port', (process.env.PORT || 5000));
 //allow downloads in the root
 app.use(express.static(__dirname));
 
-//Something so we can post data 
+//Something so we can post data
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
 
-//Send traffic to the form 
+//Send traffic to the form
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/index.html');
 });
@@ -33,10 +33,10 @@ app.post('/', function(req, res){
 //Items Checked For Services Row
 var servicesList = req.body.services;
 
-// // all of our services data 
+// // all of our services data
 var list = [{
     sName:"Basement Finishing",
-    sFile: "<div class=\"small-12 medium-3 columns\"> <div class=\"service-item\"><a href=\"/basement-finishing.html\" title=\"Basement Finishing in [territory], [major cities 3]\" alt=\"Basement Finishing in [territory], [major cities 3]\"><img src=\"http://placehold.it/150x150\"><h2>Basement Finishing</h2></a><p>Gain extra living space in your home with a custom-designed finished basement.</p></div> </div>"
+    sFile: '<div class="small-12 medium-3 columns"> <div class="service-item"><a href="/basement-finishing.html" title="Basement Finishing in [territory], [major cities 3]" alt="Basement Finishing in [territory], [major cities 3]"><img src="http://placehold.it/150x150"><h2>Basement Finishing</h2></a><p>Gain extra living space in your home with a custom-designed finished basement.</p></div> </div>'
 },
 {
     sName:'Basement Waterproofing',
@@ -119,26 +119,27 @@ var list = [{
 // store HTML of Matches
  var serviceMark = [];
 
-// //Loop through services to see if we have a match with what the user checked. 
-for(var i = 0; i < list.length; i++) { 
+// //Loop through services to see if we have a match with what the user checked.
+var newStr = '';
+for(var i = 0; i < list.length; i++) {
 	 	for (var j = 0; j < servicesList.length; j++) {
 	        if (list[i].sName == servicesList[j]) {
 				serviceMark.push(list[i].sFile);
 	        }
 	    }
+      return false;
 }
 
-//Make Sure Data Is Correct 
+//Make Sure Data Is Correct
 var servicesforReal = serviceMark.join("");
 
 //store our template file
 var compiled = ejs.compile(fs.readFileSync('./views/demo.ejs', 'utf8'));
- 
+
 //Fill out our templates
-var html = compiled({ 
-	 	 favicon: req.body.favicon,
+var html = compiled({
+	 	   favicon: req.body.favicon,
 	     logo: req.body.logo,
-	     serviceArea: req.body.servicearea,
 
 	     credImg1: req.body.firstcred,
 	     credImg2: req.body.secondcred,
@@ -158,13 +159,11 @@ var html = compiled({
 
 	     calloutImgOne: req.body.call1,
 	     calloutLinkOne: req.body.call1link,
-
 	     calloutImgTwo: req.body.call2,
 	     calloutLinkTwo: req.body.call2link,
-
 	     calloutImgThree: req.body.call3,
 	     calloutLinkThree: req.body.call3link,
-	     
+
 	     services:  servicesforReal,
 
 	     facebook: req.body.facebook,
@@ -175,15 +174,15 @@ var html = compiled({
 
 
 });
- 
+
 // Compile our EJS into a HTML file
 fs.writeFileSync("borders.html", html);
 
 
-//Lets play with our CSS File 
+//Lets play with our CSS File
 
 var compiledCSS = ejs.compile(fs.readFileSync('./views/template.css', 'utf8'));
-var css = compiledCSS({ 
+var css = compiledCSS({
 	logo: req.body.logo,
 	mainMessageImage: req.body.mainMessageImage,
 	whyChooseImage: req.body.whyChooseImage,
@@ -193,7 +192,7 @@ var css = compiledCSS({
 
 fs.writeFileSync("template.css", css);
 
-// Send user to a new file where they can grab there goodies 
+// Send user to a new file where they can grab there goodies
 res.sendFile(__dirname + '/done.html');
 
 

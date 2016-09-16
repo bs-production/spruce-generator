@@ -1,39 +1,82 @@
+body {
+  background-color: #54655b !important;
+  background-image: url("https://www.transparenttextures.com/patterns/shley-tree-2.png") !important;
+  background-attachment: fixed !important;
+}
+.container {
+
+}
+
+
+.why-choose {
+  margin-bottom: 34px;
+}
 form h3 {
   font-size: 28px;
   color: #54655B;
   font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+form p {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #545454;
 }
 .form-styles {
-  background: #EBF0ED;
-  padding: 50px;
-  border-radius: 20px;
+  background: #ebf0ed;
+  padding: 60px 80px;
   margin-bottom: 40px;
-  box-shadow: 1px 3px 7px #C5C5C5;
+  box-shadow: 1px 3px 7px #000;
+
 }
 .form-container {
   width: 960px;
 }
-div#spruce {
-  background: url('http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/694/spruce-leaf.jpg') no-repeat -23px 30px;
-  background-size: 150px;
-  text-align: center;
+.why-choose label {
+  font-weight: bold;
+  color: #545454;
+  font-size: 15px;
 }
 .header {
-margin: 0px 0 70px 0px;
+  text-align: center;
+  padding-top: 60px;;
+}
+
+.header img {
+  margin-bottom: 50px;
 }
 .header h1 {
-  font-size: 49px;
+  font-family: 'Pattaya', sans-serif;
+  font-size: 58px;
   margin: 0;
   line-height: 100%;
   font-weight: bold;
-  color: #54655b;
-  padding-top: 83px;
+  color: #fff;
+}
+.header h2 {
+  color: #98C6AB;
+  padding-top: 3px;
+  font-size: 55px;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+.header h3 {
+  font-family: 'Pattaya', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 100%;
+  font-weight: bold;
+  color: #fff;
 }
 .header h4 {
-  color: #000;
-  padding-top: 3px;
-  font-size: 25px;
+  color: #98C6AB;
+  font-size: 24px;
   font-style: italic;
+  padding-top: 3px;
+  margin-bottom: 40px;
 }
 
 .button.large {
@@ -41,11 +84,11 @@ margin: 0px 0 70px 0px;
     font-weight: bold;
 }
 .button.alert {
-    background-color: #54655B !important;
+    background-color: #6e8778 !important;
     color: #fefefe;
 }
 .button.alert:hover {
-    background-color: #6e8778 !important;
+    background-color: #54655B !important;
     color: #fefefe;
 }
 .shazam {
@@ -54,4 +97,125 @@ margin: 0px 0 70px 0px;
 }
 .done-bkg {
   background: #EBF0ED;
+}
+
+/*Checkbox styles*/
+.checkbox-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom, .checkbox-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox-custom-label {
+    position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    background: #54655B;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+
+/*Done page*/
+.downloads {
+  background: #ddf1e5;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 30px 0 18px 0;
+  text-align: center;
+  border: 4px solid #fff;
+}
+.downloads p {
+  font-size: 20px;
+  line-height: 12px;
+  font-weight: normal;;
+  color: #54655B;
+}
+.downloads p span {
+  line-height: 12px;
+  font-size: 20px;;
+  font-weight: bold;
+  color: #218e4c;
+}
+.code-tabs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 1px 3px 7px #000;
+}
+.code-tabs ul li a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #54655B;
+}
+.code-tabs textarea {
+  height: 1000px;
+  margin-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+.tabs-panel {
+  background: #54655B;
+}
+.tabs {
+    margin: 0;
+    list-style-type: none;
+    background: #fff;
+    border: 0 !important;
+}
+.tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+    background: #54655B !important;
+    color: #fff;
+}
+.tabs-content {
+    background: #fefefe;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border: 0 !important;
+    border-top: 0;
+}
+#clipboard img {
+  margin-left: 50px;
+}
+.copied {
+	color: #fff;
+	display: none;
+  font-family: 'Roboto', sans-serif;
+}
+.clip-svg {
+  margin-left: 10px;
+}
+.clip-svg-color {
+  fill: #fff;
+}
+.download-svg {
+  height: 20px;
+  margin-left: 30px;
+}
+.download-svg-color {
+  fill: #fff;
+}
+.footer {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
 }

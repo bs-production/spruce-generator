@@ -4,47 +4,130 @@
     <head>
         <title>My Title</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
- 
+        <link rel="stylesheet" type="text/css" href="public/stylesheets/main.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.css" />
+        <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
 
-    <body> 
-         <h1>Thanks For Playing</h1>
-         
-         <iframe src="//giphy.com/embed/3orif07xXu0wMaS4Ba" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/season-17-the-simpsons-17x9-3orif07xXu0wMaS4Ba">via GIPHY</a></p>
-         
-         
-       <p>Here Is Your File <a href="borders.html" download>Borders</a>  <br> 
-       <a href="template.css" download>template.css</a> <br> 
+    <body>
+      <div class="container">
+
+          <div class="header small-5 small-centered columns">
+            <img src="http://images.treehouseinternetgroup.com/687/white-logo-190.png" alt="" />
+              <h3>Spruce Template Generator</h3>
+                 <iframe src="//giphy.com/embed/3orif07xXu0wMaS4Ba" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+
+          <div class="row collapse">
+            <div class=" code-tabs small-11 small-centered columns">
+            <ul class="tabs" data-tabs id="example-tabs">
+              <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">borders.php</a>
+                </li>
+
+              <li class="tabs-title"><a href="#panel2">template.css</a>
+                  </li>
+            </ul>
+
+              <div class="tabs-content" data-tabs-content="example-tabs">
+
+                <div class="tabs-panel is-active" id="panel1">
+
+                    <a href="borders.html" download><span>
+                      <svg class="download-svg" id="icon-cloud-download" viewBox="0 0 32 32">
+                    <path class="download-svg-color" d="M26 10c-0.273 0-0.535 0.044-0.801 0.080-1.523-3.572-5.070-6.080-9.199-6.080s-7.674 2.508-9.2 6.080c-0.264-0.036-0.525-0.080-0.8-0.080-3.314 0-6 2.686-6 6s2.686 6 6 6c0.642 0 1.246-0.133 1.824-0.324 1.065 1.18 2.529 1.973 4.176 2.215v-2.039c-1.558-0.324-2.862-1.338-3.52-2.746-0.683 0.551-1.536 0.895-2.48 0.895-2.208 0-4-1.793-4-4s1.792-4 4-4c0.79 0 1.52 0.236 2.138 0.628 0.654-3.76 3.912-6.628 7.862-6.628 3.953 0 7.18 2.882 7.828 6.648 0.625-0.406 1.371-0.648 2.172-0.648 2.207 0 4 1.792 4 4s-1.793 4-4 4c-0.32 0-0.625-0.047-0.926-0.117-0.904 1.277-2.389 2.117-4.074 2.117-0.346 0-0.676-0.051-1-0.125v2.029c0.326 0.053 0.658 0.096 1 0.096 1.912 0 3.641-0.77 4.904-2.014 0.033 0.002 0.061 0.014 0.096 0.014 3.314 0 6-2.686 6-6s-2.686-6-6-6zM18 16h-4v10h-4l6 6 6-6h-4v-10z"></path>
+                    </svg></span></a>
+
+                  <button class="btn" data-clipboard-action="copy" data-clipboard-target="#borders"><svg class="clip-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" height="23" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path class="clip-svg-color" d="M704 896h-640v-576h640v192h64v-320c0-35-29-64-64-64h-192c0-71-57-128-128-128s-128 57-128 128h-192c-35 0-64 29-64 64v704c0 35 29 64 64 64h640c35 0 64-29 64-64v-128h-64v128z m-512-704c29 0 29 0 64 0s64-29 64-64 29-64 64-64 64 29 64 64 32 64 64 64 33 0 64 0 64 29 64 64h-512c0-39 28-64 64-64z m-64 512h128v-64h-128v64z m448-128v-128l-256 192 256 192v-128h320v-128h-320z m-448 256h192v-64h-192v64z m320-448h-320v64h320v-64z m-192 128h-128v64h128v-64z" />
+                    </svg></button>&nbsp;<span class="copied">Copied borders.php!</span>
+                <div id="clipboard">
+                  <textarea id="borders"></textarea>
+                </div>
+                </div>
+
+                <div class="tabs-panel" id="panel2">
+
+                    <a href="template.css" download><span>
+                    <svg class="download-svg" id="icon-cloud-download" viewBox="0 0 32 32">
+                    <path class="download-svg-color" d="M26 10c-0.273 0-0.535 0.044-0.801 0.080-1.523-3.572-5.070-6.080-9.199-6.080s-7.674 2.508-9.2 6.080c-0.264-0.036-0.525-0.080-0.8-0.080-3.314 0-6 2.686-6 6s2.686 6 6 6c0.642 0 1.246-0.133 1.824-0.324 1.065 1.18 2.529 1.973 4.176 2.215v-2.039c-1.558-0.324-2.862-1.338-3.52-2.746-0.683 0.551-1.536 0.895-2.48 0.895-2.208 0-4-1.793-4-4s1.792-4 4-4c0.79 0 1.52 0.236 2.138 0.628 0.654-3.76 3.912-6.628 7.862-6.628 3.953 0 7.18 2.882 7.828 6.648 0.625-0.406 1.371-0.648 2.172-0.648 2.207 0 4 1.792 4 4s-1.793 4-4 4c-0.32 0-0.625-0.047-0.926-0.117-0.904 1.277-2.389 2.117-4.074 2.117-0.346 0-0.676-0.051-1-0.125v2.029c0.326 0.053 0.658 0.096 1 0.096 1.912 0 3.641-0.77 4.904-2.014 0.033 0.002 0.061 0.014 0.096 0.014 3.314 0 6-2.686 6-6s-2.686-6-6-6zM18 16h-4v10h-4l6 6 6-6h-4v-10z"></path>
+                    </svg></span></a>
+
+                    <button class="btn-two" data-clipboard-action="copy" data-clipboard-target="#css"><svg class="clip-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" height="23" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path class="clip-svg-color" d="M704 896h-640v-576h640v192h64v-320c0-35-29-64-64-64h-192c0-71-57-128-128-128s-128 57-128 128h-192c-35 0-64 29-64 64v704c0 35 29 64 64 64h640c35 0 64-29 64-64v-128h-64v128z m-512-704c29 0 29 0 64 0s64-29 64-64 29-64 64-64 64 29 64 64 32 64 64 64 33 0 64 0 64 29 64 64h-512c0-39 28-64 64-64z m-64 512h128v-64h-128v64z m448-128v-128l-256 192 256 192v-128h320v-128h-320z m-448 256h192v-64h-192v64z m320-448h-320v64h320v-64z m-192 128h-128v64h128v-64z" />
+                      </svg>
+                      </button>&nbsp;<span class="copied">Copied template.css!</span>
+                <div id="clipboard">
+                  <textarea id="css"></textarea>
+                </div>
+
+              </div>
+              </div>
+            </div>
+
+      <div class="row">
+        <div class="footer small-6 small-centered columns">
+          &copy; 2016 Treehouse Internet Group
+        </div>
+      </div>
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+      <script>
+        var clipboard = new Clipboard('.btn');
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+
+        var clipboardTwo = new Clipboard('.btn-two');
+        clipboardTwo.on('success', function(e) {
+            console.log(e);
+        });
+        clipboardTwo.on('error', function(e) {
+            console.log(e);
+        });
+
+        clipboard.on('success', function(e) {
+        $('.copied').show();
+    		$('.copied').fadeOut(2000);
+        });
+        clipboardTwo.on('success', function(e) {
+        $('.copied').show();
+        $('.copied').fadeOut(2000);
+        });
+      </script>
 
 
-        <br> 
-        <br> 
-          <label>Borders</label>
-     	  <textarea id="borders"></textarea>
-     	   <label>CSS</label>
-     	  <textarea id="css"></textarea>
-	       <script>
-	       $.ajax({
-				    url: "/borders.html",
-				    type: "GET",
-				    success: function(response) {
-				    	$('#borders').val(response);	
-				    },
-				    error: function(xhr) {
+         <script>
+         $.ajax({
+    		    url: "/borders.html",
+    		    type: "GET",
+    		    success: function(response) {
+    		    	$('#borders').val(response);
+    		    },
+    		    error: function(xhr) {
+    		    }
+    		});
 
-				    }
-				});
+        	 $.ajax({
+    		    url: "/template.css",
+    		    type: "GET",
+    		    success: function(response) {
+    		    	$('#css').val(response);
+    		    },
+    		    error: function(xhr) {
 
-	      	 $.ajax({
-				    url: "/template.css",
-				    type: "GET",
-				    success: function(response) {
-				    	$('#css').val(response);	
-				    },
-				    error: function(xhr) {
+    		    }
+    		});
+    	  </script>
 
-				    }
-				});
-			</script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js" charset="utf-8"></script>
+
+      <script>
+        $(document).foundation();
+      </script>
+
     </body>
 </html>
