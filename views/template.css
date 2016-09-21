@@ -45,9 +45,10 @@ a:hover {
 /**------------------------------------------- Font Styles -------------------------------------------**/
 
 body,
+ul {
+    font-family: sans-serif;
+}
 h2,
-p,
-ul,
 ol {
     font-family: sans-serif;
     color: <%= primaryDarkColor %>;
@@ -57,7 +58,7 @@ h3,
 h4,
 strong {
     font-family: sans-serif;
-    color: <%= primaryBrightColor %>;
+    color:<%= primaryBrightColor %>;
 }
 #content-wrap h1 {
     font-size: 40px;
