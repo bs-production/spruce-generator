@@ -214,6 +214,52 @@
                                 ?>
 
                         </div><!-- end #widgets.container -->
+                        
+                        
+                          <div class="container home" id="customers">
+                            <div class="row">
+                                <div class="columns">
+                                    <p class="home-section-title">Happy Customers in [territory]</p>
+                                </div>
+                            </div>
+                                    
+                            <?php
+                                $meta = array();
+                                    $meta['useGeo'] = true;
+                                    $meta['manualAssetPage'] = false;
+                                    $meta['useFeatured'] = false;
+                                    $meta['siloMode'] = false;
+                                    $meta['qty'] = 3;
+                                    $meta['template'] = 5587;
+                                $templates = array();
+                                $templates['main'] = array('
+                                    <div class="row" id="home-reviews">
+                                            
+                                                 [[items]]
+
+                                            <p class="more-assets">
+                                                <a href="[[moreurl]]">View All Reviews</a>
+                                            </p>
+                                        </div>');
+                                  $templates['item'] = array('
+                                 <div class="columns large-4">
+                                     <div class="review_item" class="tabs_[[num]]">
+                                        <div class="review_item_details">
+                                            <div class="small_review_stars_grouping">[[stars]]</div>
+                                            <div class="review_customer">[[author]]</div>
+                                            <div class="review_location_date">[[location]]</div>
+                                        </div>
+                                        <div class="widget_item_right">
+                                            <div class="text review_preview"><a href="[[url]]">[[text]]</a></div>
+                                        </div>
+                                    </div>
+                                </div>');
+                                $title = 'Reviews';
+                                require_once('widgets/reviews_sidebar_widget.php');
+                                echo($output);
+                            ?>
+                            </div><!-- end customer reviews/testimonials -->  
+                            
 
     <hr style="margin: 1.25rem 5rem;">
           <div class="container" id="page-wrap">
