@@ -161,13 +161,7 @@ var html = compiled({
 	     calloutImgThree: req.body.call3,
 	     calloutLinkThree: req.body.call3link,
 
-	     services:  servicesforReal,
-
-	     facebook: req.body.facebook,
-	     twitter: req.body.twitter,
-	     google: req.body.google,
-	     linkedin: req.body.linkedin,
-	     youtube: req.body.youtube
+	     services:  servicesforReal 
 
 
 });
