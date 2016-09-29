@@ -71,72 +71,39 @@
                 </div>
             </div><!-- end #header -->
 
-            <div class="container" id="nav-bar">
-                <div class="row collapse">
-                    <div class="columns top-nav contain-to-grid sticky">
-                        <div class="container show-for-medium-up" id="logo-phone-sticky">
-                            <div class="row">
-                                <div class="columns medium-3">
-                                    <div id="logo-sticky"><a href="/"><a href="/"><img src="<%- logo %>" alt="[company]" title="[company]" border="0"></a></a></div>
-                                </div>
-                                <div class="columns medium-9">
-                                    <div id="phone-sticky">
-                                        <a class="button" href="/free-estimate.html">Contact us for a <span>Free Quote</span></a>
-                                        <a href="tel:<?php echo $phonenumber; ?>" class="phone_link">[phone]</a>
-                                    </div>
-                                </div>
-                            </div>
-                            </div><!--end Top Sticky Bar -->
-                            <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: [medium,large]">
-                                <ul class="title-area">
-                                    <!-- Title Area -->
-                                    <li class="name">
-                                    </li>
-                                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-                                </ul>
-                                <section class="top-bar-section">
-                                    <!-- Right Nav Section -->
-                                    <ul id="top-nav-list">
-                                        <li class="has-dropdown">
-                                            <a href="#"><span>Services</span></a>
-                                            <ul class="dropdown m-menu">
-                                                <li><div class="row">
-                                                    <div class="columns">
-                                                        [[top_silos]]
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            </ul><!-- end .m-menu -->
-                                            </li><!-- end SERVICES mega nav -->
-                                            <li class="has-dropdown">
-                                                <a href="#"><span>Our Work</span></a>
-                                                <ul class="dropdown m-menu short">
-                                                    <li>
-                                                        <div class="row">
-                                                            <div class="columns">
-                                                                <ul class="m-menu-ul">
-                                                                    <li><a href="/about-us/photo-gallery.html">Photo Gallery</a></li>
-                                                                    <li><a href="/about-us/before-after.html">Before &amp; After</a></li>
-                                                                    <li><a href="/about-us/testimonials.html">Testimonials</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li onclick="location.href='/about-us/financing.html';" style="cursor:pointer;"><a href="/about-us/financing.html"><span>Financing</span></a></li>
-                                            <!-- <li onclick="location.href='/about-us/reviews.html';" style="cursor:pointer;"><a href="/about-us/reviews.html"><span>Customer Reviews</span></a></li> -->
-                                            <li onclick="location.href='/service-area.html';" style="cursor:pointer;"><a href="/service-area.html"><span>Service Area</span></a></li>
-                                            <li onclick="location.href='/about-us.html';" style="cursor:pointer;"><a href="/about-us.html"><span>About Us</span></a></li>
-
-
-                                        </ul>
-                                    </section>
-                                    </nav><!-- END Nav -->
-                                </div>
-                            </div>
-                        </div><!-- End #nav-bar -->
+           <!-- SUPER NAV TOOL -->            
+            <?php
+                $superNav = new nav();
+                $superNav->superTemplateId = 3;
+                $superNav->superMode = 'top';
+                $superNav->superItems = array(
+                    'Services' => array(
+                        'target' => 'services'
+                    ),
+                    'Our Work' => array(
+                        'target' => 'about',
+                        'show_about_link' => false
+                    ),
+                    //Replace With Page ID of Financing Page
+                    12345 => array(
+                        'grandchildren' => false
+                    ),
+                    //Replace with Page ID of Reviews Page
+                    12345 => array(
+                        'grandchildren' => false
+                    ),
+                    'Service Area' => array(
+                        'target' => 'map',
+                    ),
+                    //Replace with Page ID of About Us Page
+                    12345 => array(
+                        'grandchildren' => false
+                    )
+                );
+                
+                echo $superNav->generateSuperMarkup();
+                ?>
+        <!-- END SUPER NAV TOOL -->    
 
 
                         <?php if ($thePage == "index") { ?>
@@ -273,9 +240,7 @@
                                 echo($output);
                             ?>
                             </div><!-- end customer reviews/testimonials -->  
-                            
-
-    <hr style="margin: 1.25rem 5rem;">
+                               
           <div class="container" id="page-wrap">
               <div class="row">
                   <div class="columns homepage-content" id="content-wrap">
@@ -531,14 +496,11 @@
                             <span><a href="tel:<?php echo $phonenumber; ?>" class="phone_link">[phone]</a></span>
                         </p>
                         <p class="footer-address">
-                            &copy; <?php echo(date('Y')); ?> [[company]]<br>
-                            [[address street]]<br>
-                        [[address city]], [[address state]] [[address zip]]</p>
+                            &copy; <?php echo(date('Y')); ?> [[display_addresses]] </p>
                           <p>
                             Contractor ID: [license number]
                           </p>
-                          <p><a href="https://www.contractornation.com/homeowners.php" target="_blank">
-                            <img src="/core/images/universal/contractor-nation-badge.png"></a>
+                          <p>[[cn-logo]] 
                           </p>
                     </div>
                 </div>
