@@ -15,45 +15,59 @@
         <div id="template-wrap">
             <div class="container" id="header">
                 <div class="row collapse">
-                    <div class="large-4 columns" id="logo">
-                         <a href="/"><img src="<%- logo %>" alt="[company]" title="[company]" border="0"></a>
+                    <div class="large-5 columns" id="logo">
+                         <?php echo $logo; ?>
                     </div>
-                    <div class="large-8 columns" id="phone">
-                        <?php
-                            $iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-                            $android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
-                            if($iphone || $android  == true)
-                          {
-                        ?>
-                            <a href="tel:<?php echo $phonenumber; ?>" class="phone_link">
+                    <div class="large-7 columns" id="contact" data-equalizer-watch>
+                        <div class="row collapse" id="header-service-wrap">
+                            <div class="large-9 large-offset-3 columns" id="header-service-area">
+                                <p onclick="location.href='/service-area.html';" style="cursor:pointer;">Serving [territory], [major cities 3]</p>
+                            </div>
+                        </div>
+                        <div class="row collapse">
+                            <div class="columns" id="phone">
 
-                        <?
-                        }
-                        else
-                        { ?>
+                                    <?php
+                                        $iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+                                        $android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+                                        if($iphone || $android  == true)
+                                        {
+                                        ?>
+                                        <a href="tel:<?php echo $phonenumber; ?>" class="phone_link">
 
-                            <a href="/free-estimate.html" class="phone_link">
-                        <?php
-                        }
-                        ?>
-                            <?php
-                                $times = get_open_time();
-                                if($times or isset($_GET['open']))
-                                {
+                                        <?
+                                        }
+                                        else
+                                        { ?>
+
+                                        <a href="/free-estimate.html" class="phone_link">
+                                    <?php
+                                    }
                                     ?>
 
-                                <div class="opensign"><span>open</span></div>
+                                    <?php
+                                    $times = get_open_time();
+                                    if($times or isset($_GET['open']))
+                                    {
+                                    ?>
 
-                            <?php
-                            }
-                                ?>
+                                    <div class="opensign"><span>open</span></div>
 
-                            [phone]
+                                    <?php
+                                    }
+                                    ?>
 
-                        </a>
-                        <p onclick="location.href='/service-area.html';" style="cursor:pointer;" id="header-service-area">Serving [territory], [major cities 3]
-                        </p>
-                    </div>
+                                    [phone]
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row collapse">
+                            <div class="columns" id="header-btn">
+                                <a class="button" href="/free-estimate.html">or <span>Contact Us Online</span></a>
+                            </div>
+                        </div>
+
+                    </div><!-- end #contact -->
                 </div>
             </div><!-- end #header -->
 
