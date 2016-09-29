@@ -111,46 +111,74 @@ strong {
     line-height: 20px;
     /* color: #676767; */
 }
+
+
 /**------------------------------------------- Header -------------------------------------------*/
-#phone-sticky a.phone_link span, #phone-sticky a.phone_link:hover span {
-  color: <%= primaryBrightColor %>;
-}
+
 #header {
-    background-color: #fff;
+    background: #fff;
     padding: 20px 0px;
 }
-
+#contact {
+    position: relative;
+}
 #phone {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     position: relative;
 }
 #phone > a {
-    color: <%= primaryBrightColor %> !important;
+    color: <%= primaryBrightColor %>;
     line-height: 100%;
-    font-weight: bold;
-    font-size: 40px;
+    font-weight: 700;
+    font-size: 36px;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    
 }
-p#header-service-area {
+
+#header-btn a.button {
+    text-transform: none;
+    border-radius: 30px;
+    padding: 5px 15px;
+    margin: 10px auto 0px;
+    line-height: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    width: auto !important;
+}
+#header-btn a.button span {
+    font-weight: 700;
+}
+#header-service-wrap {
+    margin-bottom: 20px;
+}
+#header-service-area p {
     display: block;
     line-height: 1.2em;
-    text-align: center;
-    color: #353535;
+    text-align: right;
+    color: #555;
     margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
 }
-p#header-service-area:hover {
-      color: <%= primaryBrightColor %>;
+#header-service-area p:hover {
+    color: #353535;
+    text-decoration: underline;
 }
 .opensign {
     float: left;
-    background: <%= primaryBrightColor %>;
+    background: #d50208;
     border-radius: 7px;
     padding: 5px;
+    margin: -5px 10px 0px 0px;
 }
-
-.opensign span{
-    font: 16px/100% sans-serif;
+.opensign span {
+    font: 400 16px/100% 'Roboto', sans-serif;
     text-transform: uppercase;
-    padding: 8px 10px 6px;
+    padding: 8px 10px;
     display: block;
     border: 1px solid #FFFFFF;
     border-radius: 3px;
@@ -158,42 +186,30 @@ p#header-service-area:hover {
 }
 @media screen and (min-width: 1025px) {
     #phone {
-        height: 80px;
         text-align: right;
-    }
-    .opensign {
-        margin: 0px 20px 0px 0px;
+        height: 55px;
     }
     #phone > a {
-        font-size: 40px;
-        display: block;
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 50%;
         right: 0;
+    }
+    #header-btn a.button {
+        float: right;
     }
     p#header-service-area {
         position: absolute;
         width: 280px;
         right: 0;
-        top: 65px;
-    }
-    .paypal {
-    position: absolute;
-    width: 280px;
-    right: 0;
-    top: 85px;
+        top: 90px;
     }
 }
 @media screen and (max-width: 1024px) {
     #logo {
-      text-align: center;
-      padding-bottom: 0px;
+        margin-bottom: 25px;
+        text-align: center;
     }
     #phone {
         text-align: center;
-        margin: 25px auto 10px;
+        margin: 15px auto;
     }
     #phone a {
         -webkit-transform: none;
@@ -205,17 +221,27 @@ p#header-service-area:hover {
         font-size: 28px;
         width: 300px;
     }
-    p#header-service-area {
-        position: relative;
-        width: auto;
-        margin-top: 15px;
+
+    #header-btn {
+        text-align: center;
     }
-    .opensign {
-        margin: -6px 0px 0px 0px;
+    #header-btn a.button {
+        display: inline-block;
+    }
+    #header-service-wrap {
+        margin-bottom: 5px;
+    }
+    #header-service-area p {
+        text-align: center;
+        font-size: 14px;
+    }
+     .opensign {
+        margin: -2px 5px 0px 0px;
     }
     .opensign span{
         font-size: 12px;
     }
+
 }
 
 /**------------------------------------------- TOP Nav Styles -------------------------------------------**/
