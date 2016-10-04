@@ -1,13 +1,14 @@
 var express = require('express');
 var app = express();
-var fs = require('fs');
+var fs = require('fs-extra')
 var path = require('path');
 var bodyParser = require('body-parser');
+var Git = require("nodegit");
+
 
 //Set EJS up to process
 var ejs = require('ejs');
 app.set('view engine', 'ejs')
-
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -20,11 +21,22 @@ app.use(bodyParser.urlencoded({
 }));
 
 
+//empty our folder
+fs.emptyDirSync('./template', function (err) {
+  if (!err) console.log('success!')
+})
+
+//Clone Our Template Files For processing
+Git.Clone("https://github.com/bs-production/spruce-template", "template").then(function(repository) {});
+
+
 //Send traffic to the form
 app.get("/", function (request, response) {
+
+
+
   response.sendFile(__dirname + '/index.html');
 });
-
 
 //Once you fill out the form start processing our data and making our files
 app.post('/', function(req, res){
@@ -131,7 +143,7 @@ for(var i = 0; i < list.length; i++) {
 var servicesforReal = serviceMark.join("");
 
 //store our template file
-var compiled = ejs.compile(fs.readFileSync('./views/demo.ejs', 'utf8'));
+var compiled = ejs.compile(fs.readFileSync('./template/demo.ejs', 'utf8'));
 
 //Fill out our templates
 var html = compiled({
@@ -161,7 +173,7 @@ var html = compiled({
 	     calloutImgThree: req.body.call3,
 	     calloutLinkThree: req.body.call3link,
 
-	     services:  servicesforReal 
+	     services:  servicesforReal
 
 
 });
@@ -172,7 +184,7 @@ fs.writeFileSync("borders.html", html);
 
 //Lets play with our CSS File
 
-var compiledCSS = ejs.compile(fs.readFileSync('./views/template.css', 'utf8'));
+var compiledCSS = ejs.compile(fs.readFileSync('./template/template.css', 'utf8'));
 var css = compiledCSS({
 	logo: req.body.logo,
 	mainMessageImage: req.body.mainMessageImage,
