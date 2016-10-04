@@ -3,8 +3,6 @@ var app = express();
 var fs = require('fs-extra')
 var path = require('path');
 var bodyParser = require('body-parser');
-var Git = require("nodegit");
-
 
 //Set EJS up to process
 var ejs = require('ejs');
@@ -27,7 +25,8 @@ fs.emptyDirSync('./template', function (err) {
 })
 
 //Clone Our Template Files For processing
-Git.Clone("https://github.com/bs-production/spruce-template", "template").then(function(repository) {});
+  require('simple-git')()
+    .clone("https://github.com/bs-production/spruce-template", "./template");
 
 
 //Send traffic to the form
