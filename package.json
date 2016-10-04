@@ -14,14 +14,14 @@
     "express": "^5.0.0-alpha.2",
     "nodegit": "^0.16.0",
     "fs-extra": "^0.30.0",
-    "pug": "^2.0.0-beta5"
+    "ejs": "^2.5.2"
   },
   "engines": {
     "node": "4.4.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://hyperdev.com/#!/project/welcome-project"
+    "url": ""
   },
   "keywords": [
     "node",
