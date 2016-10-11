@@ -95,7 +95,7 @@ var list = [{
 },
 {
     sName:"Roof Replacement",
-    sFile:'<div class="small-12 medium-3 columns"> <div class="service-item"><a href="/roof-replacement.html" title="Roof Replacement in [territory], [major cities 3]" alt="Roof Replacement in [territory], [major cities 3]"><img src="http://placehold.it/150x150"><h2>Roof Replacement</h2></a><p>We fix roof leaks and roofing problems with prompt, expert service and quality products.</p></div> </div>'
+    sFile:'<div class="small-12 medium-3 columns"> <div class="service-item"><a href="/roof-replacement.html" title="Roof Replacement in [territory], [major cities 3]" alt="Roof Replacement in [territory], [major cities 3]"><img src="http://placehold.it/150x150"><h2>Roof Replacement</h2></a><p>When it\'s time for a new roof, we provide quality products and worry-free installation.</p></div> </div>'
 },
 {
     sName:"Remodeling",
