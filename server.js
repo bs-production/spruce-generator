@@ -158,7 +158,6 @@ var html = compiled({
 	     mainMessageText: req.body.mmText,
 	     mainMessageSubtext: req.body.mmSubText,
 
-	     whyChooseTitle: req.body.whytile,
 	     whyChooseOne: req.body.why1,
 	     whyChooseTwo: req.body.why2,
 	     whyChooseThree: req.body.why3,
