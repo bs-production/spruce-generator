@@ -140,6 +140,34 @@ for(var i = 0; i < list.length; i++) {
 
 //Make Sure Data Is Correct
 var servicesforReal = serviceMark.join("");
+	
+	
+ // Check to see if user has inputed a city to hardcode if not set the token
+ if (req.body.city1 == '')
+ {
+    var cityBlock = '[[city_scroll:100]]';
+ }
+    else
+{
+        // lets make some list items from inputed cities
+      var cityBlock = '<p class="home-section-title">our service area</p>\n
+      	<div class="city_scroll_list_container">\n
+      	<div class="city_scroll_list_content">	\n
+	<ul class="city_scroll_list">' 
+      	'<li>' + req.body.city1 + '<li>' \n 
+      	'<li>' + req.body.city2 + '<li>' \n
+      	'<li>' + req.body.city3 + '<li>' \n
+	'<li>' + req.body.city4 + '<li>' \n
+        '<li>' + req.body.city5 + '<li>' \n
+	'<li>' + req.body.city6 + '<li>' \n
+      	'</ul>'\n
+	   '<span class="city_scroll_list_local_phone">Our Locations:<br>[[display_addresses_phone]]</span> </div>
+        <div class="city_scroll_list_footer">
+          <p class="more-assets"><a href="/service-area.html">More Cities</a></p>
+        </div>';
+ }	
+	
+
 
 //store our template file
 var compiled = ejs.compile(fs.readFileSync('./template/demo.ejs', 'utf8'));
@@ -162,7 +190,8 @@ var html = compiled({
 	     whyChooseTwo: req.body.why2,
 	     whyChooseThree: req.body.why3,
 	     whyChooseFour: req.body.why4,
-
+	
+	     cityBlock: cityBlock,
 
 	     calloutImgOne: req.body.call1,
 	     calloutLinkOne: req.body.call1link,
