@@ -138,7 +138,7 @@ for(var i = 0; i < list.length; i++) {
 	    }
 }
 
-//Make Sure Data Is Correct
+//Make Sure Service Data Is Correct
 var servicesforReal = serviceMark.join("");
 	
 	
