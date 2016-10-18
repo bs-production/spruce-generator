@@ -150,7 +150,7 @@ var servicesforReal = serviceMark.join("");
     else
 {
 // lets make some list items from inputed cities
-var cityBlock = '<p class="home-section-title">our service area</p><div class="city_scroll_list_container"><div class="city_scroll_list_content"><ul class="city_scroll_list"><li>' + req.body.city1 + '<li><li>' + req.body.city2 + '<li>  <li>' + req.body.city3 + '<li><li>' + req.body.city4 + '<li><li>' + req.body.city5 + '<li><li>'+ req.body.city6 + '</li></ul><span class="city_scroll_list_local_phone">Our Locations:<br>[[display_addresses_phone]]</span></div><div class="city_scroll_list_footer"><p class="more-assets"><a href="/service-area.html">More Cities</a></p></div>';
+var cityBlock = '<div class="city_scroll_list_content"><ul class="city_scroll_list"><li>' + req.body.city1 + '<li><li>' + req.body.city2 + '<li>  <li>' + req.body.city3 + '<li><li>' + req.body.city4 + '<li><li>' + req.body.city5 + '<li><li>'+ req.body.city6 + '</li></ul><span class="city_scroll_list_local_phone">Our Locations:<br>[[display_addresses_phone]]</span></div><div class="city_scroll_list_footer"><p class="more-assets"><a href="/service-area.html">More Cities</a></p></div>';
 
 }	
 	
