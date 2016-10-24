@@ -185,7 +185,7 @@ var html = compiled({
 	     whyChooseFour: req.body.why4,
 	
 	     cityBlock: cityBlock,
-	     cityList: fCity,
+	     fCity: cityList,
 
 	     calloutImgOne: req.body.call1,
 	     calloutLinkOne: req.body.call1link,
