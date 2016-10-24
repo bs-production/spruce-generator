@@ -185,7 +185,7 @@ var html = compiled({
 	     whyChooseFour: req.body.why4,
 	
 	     cityBlock: cityBlock,
-	     fCity: cityList,
+	     
 
 	     calloutImgOne: req.body.call1,
 	     calloutLinkOne: req.body.call1link,
@@ -211,7 +211,8 @@ var css = compiledCSS({
 	mainMessageImage: req.body.mainMessageImage,
 	whyChooseImage: req.body.whyChooseImage,
 	primaryDarkColor: req.body.primaryDarkColor,
-	primaryBrightColor: req.body.primaryBrightColor
+	primaryBrightColor: req.body.primaryBrightColor,
+	fCity: cityList,
 });
 
 fs.writeFileSync("template.css", css);
