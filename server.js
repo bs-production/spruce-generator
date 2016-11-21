@@ -141,25 +141,8 @@ for(var i = 0; i < list.length; i++) {
 //Make Sure Service Data Is Correct
 var servicesforReal = serviceMark.join("");
 	
-	
- // Check to see if user has inputed a city to hardcode if not set the token
- if (req.body.city1 == '')
- {
-    var cityBlock = '[[city_scroll:100]]';
-    //Lets get a file and store it in variable
-    var cityList = fs.readFileSync('./template/partials/full-city-block.css', 'utf8');
- }
-    else
-{
- // lets make some list items from inputed cities
-var cityBlock = '<div class="city_scroll_list_container"><div class="city_scroll_list_content"><ul class="city_scroll_list"><li>' + req.body.city1 + '</li><li>' + req.body.city2 + '</li>  <li>' + req.body.city3 + '</li><li>' + req.body.city4 + '</li><li>' + req.body.city5 + '</li><li>'+ req.body.city6 + '</li></ul><span class="city_scroll_list_local_phone">Our Locations:<br>[[display_addresses_phone]]</span></div><div class="city_scroll_list_footer"><p class="more-assets"><a href="/service-area.html">More Cities</a></p></div></div>';
-//Lets get a file and store it in variable
-var cityList = fs.readFileSync('./template/partials/6-city-block.css', 'utf8');
-	
-	
-}	
-	
-
+//Use City Token	
+var cityBlock = '[[city_scroll:100]]';
 
 //store our template file
 var compiled = ejs.compile(fs.readFileSync('./template/index.ejs', 'utf8'));
