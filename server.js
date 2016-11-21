@@ -143,6 +143,7 @@ var servicesforReal = serviceMark.join("");
 	
 //Use City Token	
 var cityBlock = '[[city_scroll:100]]';
+var cityList = fs.readFileSync('./template/partials/6-city-block.css', 'utf8');
 
 //store our template file
 var compiled = ejs.compile(fs.readFileSync('./template/index.ejs', 'utf8'));
