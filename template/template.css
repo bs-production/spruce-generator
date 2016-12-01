@@ -167,7 +167,7 @@ strong {
 }
 .opensign {
     float: left;
-    background: #d50208;
+    background: <%= primaryBrightColor %>;
     border-radius: 7px;
     padding: 5px;
     margin: -5px 10px 0px 0px;
@@ -292,6 +292,9 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 #phone-sticky a.button:hover {
     background: <%= primaryDarkColor %>;
+}
+#phone-sticky a.phone_link span, #phone-sticky a.phone_link:hover span {
+    color: <%= primaryBrightColor %>;
 }
 .button:visited {
     color: #fff;
