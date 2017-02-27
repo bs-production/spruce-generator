@@ -165,11 +165,8 @@ var html = compiled({
        whyChooseFour: req.body.why4,
   
        cityBlock: cityBlock,
-
-       if (serviceMark.length > 0) {
-          // the array is defined and has at least one element
-          services:  servicesforReal,
-      }
+   
+       services:  servicesforReal,
        
        calloutImgOne: req.body.call1,
        calloutLinkOne: req.body.call1link,
