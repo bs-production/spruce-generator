@@ -147,7 +147,7 @@ var bbbIn = req.body.BBB;
 var BBBcode = '<!-- Add this if BBB --><div class="columns widget-item"><div class="widget-affil-img">' + bbbIn + '</div></div><!-- end BBB -->';
 
 if(bbbIn == 0) {
-  var BBBcode = "":
+  var BBBcode = "";
 }
 
 //store our template file
