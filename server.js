@@ -141,6 +141,10 @@ var servicesforReal = serviceMark.join("");
 //Use City Token	
 var cityBlock = '[[city_scroll:100]]';
 var cityList = fs.readFileSync('./template/partials/full-city-block.css', 'utf8');
+	
+//BBB Code 
+
+var BBBcode = '<!-- Add this if BBB --><div class="columns widget-item"><div class="widget-affil-img"> + req.body.bbb + </div></div><!-- end BBB -->';
 
 //store our template file
 var compiled = ejs.compile(fs.readFileSync('./template/index.ejs', 'utf8'));
@@ -167,6 +171,8 @@ var html = compiled({
        cityBlock: cityBlock,
    
        services:  servicesforReal,
+	
+       BBBcode: BBBcode,
        
        calloutImgOne: req.body.call1,
        calloutLinkOne: req.body.call1link,
