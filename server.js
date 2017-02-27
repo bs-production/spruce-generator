@@ -143,7 +143,7 @@ var cityBlock = '[[city_scroll:100]]';
 var cityList = fs.readFileSync('./template/partials/full-city-block.css', 'utf8');
 	
 //BBB Code 
-var bbbIn = req.body.bbb;
+var bbbIn = req.body.BBB;
 var BBBcode = '<!-- Add this if BBB --><div class="columns widget-item"><div class="widget-affil-img">' + bbbIn + '</div></div><!-- end BBB -->';
 
 //store our template file
