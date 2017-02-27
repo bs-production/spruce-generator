@@ -144,7 +144,7 @@ var cityList = fs.readFileSync('./template/partials/full-city-block.css', 'utf8'
 	
 //BBB Code 
 
-var BBBcode = '<!-- Add this if BBB --><div class="columns widget-item"><div class="widget-affil-img"> + req.body.bbb + </div></div><!-- end BBB -->';
+var BBBcode = '<!-- Add this if BBB --><div class="columns widget-item"><div class="widget-affil-img">' + req.body.bbb + '</div></div><!-- end BBB -->';
 
 //store our template file
 var compiled = ejs.compile(fs.readFileSync('./template/index.ejs', 'utf8'));
