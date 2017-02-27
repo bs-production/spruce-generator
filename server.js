@@ -31,9 +31,6 @@ fs.emptyDirSync('./template', function (err) {
 
 //Send traffic to the form
 app.get("/", function (request, response) {
-
-
-
   response.sendFile(__dirname + '/index.html');
 });
 
