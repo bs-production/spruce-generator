@@ -147,35 +147,36 @@ var compiled = ejs.compile(fs.readFileSync('./template/index.ejs', 'utf8'));
 
 //Fill out our templates
 var html = compiled({
-	 	   favicon: req.body.favicon,
-	     logo: req.body.logo,
+       favicon: req.body.favicon,
+       logo: req.body.logo,
 
-	     credImg1: req.body.firstcred,
-	     credImg2: req.body.secondcred,
-	     credImg3: req.body.thirdcred,
-	     credImg4: req.body.fourthcred,
+       credImg1: req.body.firstcred,
+       credImg2: req.body.secondcred,
+       credImg3: req.body.thirdcred,
+       credImg4: req.body.fourthcred,
 
-	     mainMessageImage: req.body.mmImage,
-	     mainMessageText: req.body.mmText,
-	     mainMessageSubtext: req.body.mmSubText,
+       mainMessageImage: req.body.mmImage,
+       mainMessageText: req.body.mmText,
+       mainMessageSubtext: req.body.mmSubText,
 
-	     whyChooseOne: req.body.why1,
-	     whyChooseTwo: req.body.why2,
-	     whyChooseThree: req.body.why3,
-	     whyChooseFour: req.body.why4,
-	
-	     cityBlock: cityBlock,
-	     
+       whyChooseOne: req.body.why1,
+       whyChooseTwo: req.body.why2,
+       whyChooseThree: req.body.why3,
+       whyChooseFour: req.body.why4,
+  
+       cityBlock: cityBlock,
 
-	     calloutImgOne: req.body.call1,
-	     calloutLinkOne: req.body.call1link,
-	     calloutImgTwo: req.body.call2,
-	     calloutLinkTwo: req.body.call2link,
-	     calloutImgThree: req.body.call3,
-	     calloutLinkThree: req.body.call3link,
-
-	     services:  servicesforReal
-
+       if (serviceMark.length > 0) {
+          // the array is defined and has at least one element
+          services:  servicesforReal,
+      }
+       
+       calloutImgOne: req.body.call1,
+       calloutLinkOne: req.body.call1link,
+       calloutImgTwo: req.body.call2,
+       calloutLinkTwo: req.body.call2link,
+       calloutImgThree: req.body.call3,
+       calloutLinkThree: req.body.call3link
 
 });
 
