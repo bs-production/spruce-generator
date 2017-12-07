@@ -112,34 +112,7 @@
 
                             </div>
                         </div><!-- /#main-message -->
-
-                        <div class="container" id="services">
-                            <div class="row">
-                           <%- services %>
-                            </div>
-                        </div><!-- /#services -->
-
-                        <div class="container home" id="choose-us">
-                                <div class="row">
-                                    <div class="columns">
-                                        <p class="home-section-title">Why [territory] Homeowners Choose Us</p>
-                                    </div>
-                                </div>
-                                <div class="row choose-wrap">
-                                    <div class="medium-6 large-3 columns">
-                                        <div class="choose-item"><i class="fa fa-truck" aria-hidden="true"></i><p><%= whyChooseOne %></p></div>
-                                    </div>
-                                    <div class="medium-6 large-3 columns">
-                                        <div class="choose-item"><i class="fa fa-trophy" aria-hidden="true"></i><p><%= whyChooseTwo %></p></div>
-                                    </div>
-                                    <div class="medium-6 large-3 columns">
-                                        <div class="choose-item"><i class="fa fa-users" aria-hidden="true"></i><p><%= whyChooseThree %></p></div>
-                                    </div>
-                                    <div class="medium-6 large-3 columns">
-                                        <div class="choose-item"><i class="fa fa-file-text" aria-hidden="true"></i><p><a href="/free-estimate.html"><%= whyChooseFour %></a></p></div>
-                                    </div>
-                                </div>
-                            </div>   <!-- end #choose-us -->                       
+                   
               
                         <div class="container" id="homepage-content">
 
@@ -304,35 +277,7 @@
             }
             ?>
 
-              <?php if (($thePage == "index")) { ?>
-
-              <div class="container" id="hp-features">
-                <div class="row">
-                    <div class="medium-4 columns">
-                        <div class="feature-item">
-                            <a href="<%- calloutLinkOne %>">
-                              <img src="<%- calloutImgOne %>"></a>
-                        </div>
-                    </div>
-                    <div class="medium-4 columns">
-                      <div class="feature-item">
-                          <a href="<%- calloutLinkTwo %>">
-                            <img src="<%- calloutImgTwo %>"></a>
-                      </div>
-                    </div>
-                    <div class="medium-4 columns">
-                        <div class="feature-item">
-                            <a href="<%- calloutLinkThree %>">
-                              <img src="<%- calloutImgThree %>"></a>
-                        </div>
-                    </div>
-                </div>
-              </div>
-
-              <?php
-              }
-              ?>
-
+            
               <?php if (($thePage != "service-area") && ($isCityPage == 0) && ($thePage != "free-estimate")) { ?>
 
                 <div class="container home" id="service-area">

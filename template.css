@@ -20,13 +20,13 @@ a,
 #tabs .ui-state-active a,
 #tabs .ui-state-active a:link,
 #tabs-light-bar .ui-widget-content a {
-    color: #c22c21;
+    color: ;
 }
 a:visited {
     color: #222;
 }
 a:hover {
-  color: #0081C9;
+  color: ;
 }
 /**------------------------------------------- Font Styles -------------------------------------------**/
 
@@ -37,14 +37,14 @@ ul {
 h2,
 ol {
     font-family: sans-serif;
-    color: #0081C9;
+    color: ;
 }
 h1,
 h3,
 h4,
 strong {
     font-family: sans-serif;
-    color:#c22c21;
+    color:;
 }
 #content-wrap h1 {
     font-size: 40px;
@@ -63,7 +63,7 @@ strong {
     margin-bottom: 15px;
 }
 #content-wrap h4 {
-    color: #0081C9;
+    color: ;
     font-family: sans-serif;
     font-size: 20px;
 }
@@ -76,7 +76,7 @@ strong {
 .home p.home-section-title {
     font: bold 28px/1.3em sans-serif;
     text-transform: uppercase;
-    color: #0081C9;
+    color: ;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -117,7 +117,7 @@ strong {
     position: relative;
 }
 #phone > a {
-    color: #c22c21;
+    color: ;
     line-height: 100%;
     font-weight: 700;
     font-size: 36px;
@@ -159,7 +159,7 @@ strong {
 }
 .opensign {
     float: left;
-    background: #c22c21;
+    background: ;
     border-radius: 7px;
     padding: 5px;
     margin: -5px 10px 0px 0px;
@@ -236,11 +236,11 @@ strong {
 /**------------------------------------------- TOP Nav Styles -------------------------------------------**/
 #nav-bar,
 .contain-to-grid {
-    background: #0081C9;
+    background: ;
 }
 
 ul#top-nav-list > li:hover {
-    background: #c22c21;
+    background: ;
 }
 /* Top Nav Links */
 ul#top-nav-list > li a {
@@ -259,14 +259,14 @@ ul#top-nav-list > li.quote {
     background: #EDEDED;
 }
 ul#top-nav-list > li.quote a {
-    color: #c22c21;
+    color: ;
 }
 ul#top-nav-list > li.quote:hover {
     background-color: #EB0209;
 }
 @media screen and (max-width: 640px){
     ul#top-nav-list > li.quote a {
-        background-color: #c22c21;
+        background-color: ;
     }
 }
 /* Mega Nav Links */
@@ -274,7 +274,7 @@ ul#top-nav-list ul.m-menu a {
     color: #353535;
 }
 ul#top-nav-list ul.m-menu ul a:hover {
-    color: #c22c21;
+    color: ;
     text-decoration: none !important;
 }
 
@@ -285,30 +285,30 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 #phone-sticky a.phone_link span,
 #phone-sticky a.phone_link:hover span {
-	color: #c22c21;
+	color: ;
 }
 #phone-sticky a.button {
-    background: #c22c21;
+    background: ;
 }
 #phone-sticky a.button:hover {
-    background: #0081C9;
+    background: ;
 }
 .button:visited {
     color: #fff;
 }
 /* Sticky Logo */
 #logo-sticky a {
-  background-image: url('https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1211/logo.png');
+  background-image: url('');
 }
 /*----------------------------------------- Main Message ---------------------------------- */
 #main-message {
-	background-image:url('https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1211/main_message.jpg');
+	background-image:url('');
   width: 100%;
   background-size: cover;
   background-position: center 0;
   text-align: center;
-  border-top: 4px solid #c22c21;
-  border-bottom: 5px solid #0081C9;
+  border-top: 4px solid ;
+  border-bottom: 5px solid ;
   background-attachment: fixed;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -347,7 +347,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 .cta-button {
   display: inline-block;
-  background-color: #c22c21;
+  background-color: ;
   text-transform: uppercase;
   padding: 1rem 2rem 1.0625rem 2rem;
   color: #fff;
@@ -397,14 +397,14 @@ ul#top-nav-list ul.m-menu ul a:hover {
 .service-item p.service-title {
     font-size: 24px;
     margin: 10px auto;
-    color: #c22c21;
+    color: ;
 }
 .service-item a img {
     border: solid 4px #fefefe;
     transition: box-shadow 200ms ease-out;
 }
 .service-item a img:hover {
-    box-shadow: 0 0px 0px 5px #c22c21;
+    box-shadow: 0 0px 0px 5px ;
 }
 @media screen and (max-width: 640px){
     #services {
@@ -456,7 +456,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 #choose-us div.choose-item i.fa {
     font-size: 50px;
-    color: #c22c21;
+    color: ;
     margin-bottom: 20px;
 }
 #choose-us div.choose-item p {
@@ -493,7 +493,7 @@ p.more-assets {
 p.more-assets a {
     text-transform: uppercase;
     font-size: 14px;
-    color: #c22c21;
+    color: ;
     text-decoration: none !important;
     letter-spacing: .025em;
     transition: color .2s ease;
@@ -523,18 +523,18 @@ p.more-assets a:hover {
 }
 
 #widgets a {
-    color: #c22c21;
+    color: ;
     text-decoration: underline;
 }
 
 #widget-slider .widget-item .widget-img span {
     color: #fff !important;
     font: bold 20px/20px sans-serif;
-    background: #0081C9 !important;
+    background:  !important;
 }
 
 #widget-slider .widget-item .widget-img span::after {
-    border-right: 10px solid #0081C9;
+    border-right: 10px solid ;
 }
 
 /***------------------------------------------- Homepage Customer Reviews -------------------------------------------***/
@@ -546,7 +546,7 @@ p.more-assets a:hover {
     padding: 60px 0px;
 }
 #customers .review_item .review_preview a {
-    color: #0081C9;
+    color: ;
 }
 
 /***-------------------------------------- Homepage Features ------------------------------------------------***/
@@ -742,7 +742,7 @@ p.more-assets a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-bottom: 1px solid #0081C9;
+    border-bottom: 1px solid ;
 }
 @media screen and (max-width: 640px) {
     #silo-header {
@@ -752,7 +752,7 @@ p.more-assets a:hover {
 #silo-header::before {
     content: "";
     display: block;
-    background: #0081C9;
+    background: ;
     opacity: .8;
     width: 100%;
     height: 100%;
@@ -870,7 +870,7 @@ p.more-assets a:hover {
 /* Nav styles - first level - excludes top silo page */
 
 #subnav-left > ul > li > ul {
-    border-top: 1px solid #0081C9;
+    border-top: 1px solid ;
     padding-top: 20px;
 }
 #subnav-left > ul ul li a {
@@ -981,7 +981,7 @@ p.more-assets a:hover {
 
 a.button,
 a.arrow-button {
-    background: #c22c21;
+    background: ;
     text-shadow: none;
     font: bold 20px/1.3em sans-serif;
     border: 0;
@@ -990,7 +990,7 @@ a.arrow-button {
 }
 a.button:hover,
 a.arrow-button:hover {
-    background: #0081C9;
+    background: ;
 }
 a.arrow-button {
     padding: 10px 70px 10px 20px !important;
@@ -1027,11 +1027,11 @@ a.arrow-button {
 
 /* Contact Form Colors */
 .contact_form .step.current .title {
-     background-color: #0081C9;
+     background-color: ;
 }
 
 .contact_form button, input[type="submit"] {
-     background-color: #c22c21;
+     background-color: ;
 }
 
 /* Tabbed interface */
