@@ -25,20 +25,6 @@ a,
 a:visited {
     color: #222;
 }
-a#scrollToTop {
-    display: none;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    background: rgba(0, 0, 0, .25);
-    border-radius: 5px;
-    padding: 10px 15px;
-    color: #fff;
-    font-size: 20px;
-}
-a#scrollToTop .fa {
-    margin-right: 10px;
-}
 a:hover {
   color: <%= primaryDarkColor %>;
 }
@@ -66,22 +52,14 @@ strong {
     margin-bottom: 20px;
     line-height: 1.2;
 }
-@media screen and (max-width: 640px) {
-    #content-wrap h1 {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-}
 #content-wrap h2 {
     font-size: 24px !important;
-    color: ;
     margin: 0px auto 20px;
     font-weight: bold;
 }
 #content-wrap h3,
 .related_pages .title {
     font-size: 20px;
-    color: #000;
     margin-bottom: 15px;
 }
 #content-wrap h4 {
@@ -94,10 +72,11 @@ strong {
     padding: 0px 20px;
 }
 
-.home h2 {
+.home h2,
+.home p.home-section-title {
     font: bold 28px/1.3em sans-serif;
     text-transform: uppercase;
-    color: #353535;
+    color: <%= primaryDarkColor %>;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -108,13 +87,27 @@ strong {
     font-size: 14px;
     line-height: 20px;
 }
-
+@media screen and (max-width: 640px) {
+    h1, p.home-section-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3, h4 {
+        font-size: 16px;
+    }
+}
 
 /**------------------------------------------- Header -------------------------------------------*/
 
 #header {
     background: #fff;
     padding: 20px 0px;
+}
+#logo img {
+    max-height: 150px;
 }
 #contact {
     position: relative;
@@ -134,7 +127,6 @@ strong {
     top: 50%;
     
 }
-
 #header-btn a.button {
     text-transform: none;
     border-radius: 30px;
@@ -173,7 +165,7 @@ strong {
     margin: -5px 10px 0px 0px;
 }
 .opensign span {
-    font: 400 16px/100% 'Roboto', sans-serif;
+    font: 400 16px/100% sans-serif;
     text-transform: uppercase;
     padding: 8px 10px;
     display: block;
@@ -272,7 +264,11 @@ ul#top-nav-list > li.quote a {
 ul#top-nav-list > li.quote:hover {
     background-color: #EB0209;
 }
-
+@media screen and (max-width: 640px){
+    ul#top-nav-list > li.quote a {
+        background-color: <%= primaryBrightColor %>;
+    }
+}
 /* Mega Nav Links */
 ul#top-nav-list ul.m-menu a {
     color: #353535;
@@ -283,18 +279,19 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 
 /* Top Banner Sticky Phone # and Button*/
+.phone_link {
+  font-size: 26px;
+  font-weight: bold;
+}
 #phone-sticky a.phone_link span,
 #phone-sticky a.phone_link:hover span {
+	color: <%= primaryBrightColor %>;
 }
-
 #phone-sticky a.button {
     background: <%= primaryBrightColor %>;
 }
 #phone-sticky a.button:hover {
     background: <%= primaryDarkColor %>;
-}
-#phone-sticky a.phone_link span, #phone-sticky a.phone_link:hover span {
-    color: <%= primaryBrightColor %>;
 }
 .button:visited {
     color: #fff;
@@ -302,19 +299,18 @@ ul#top-nav-list ul.m-menu ul a:hover {
 /* Sticky Logo */
 #logo-sticky a {
   background-image: url('<%- logo %>');
-  height: 50px;
-  width: 100%;
 }
 /*----------------------------------------- Main Message ---------------------------------- */
 #main-message {
 	background-image:url('<%- mainMessageImage %>');
   width: 100%;
-  background-size: 100%;
+  background-size: cover;
   background-position: center 0;
   text-align: center;
   border-top: 4px solid <%= primaryBrightColor %>;
   border-bottom: 5px solid <%= primaryDarkColor %>;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 #main-message > .row {
@@ -350,9 +346,10 @@ ul#top-nav-list ul.m-menu ul a:hover {
   color: #fff;
 }
 .cta-button {
+  display: inline-block;
   background-color: <%= primaryBrightColor %>;
   text-transform: uppercase;
-  padding: 22px 20px 19px 20px;
+  padding: 1rem 2rem 1.0625rem 2rem;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
@@ -368,13 +365,9 @@ ul#top-nav-list ul.m-menu ul a:hover {
   color: #fff;
 }
 @media screen and (max-width: 640px){
-    .main-message {
+    #main-message {
       height: 350px;
       background-attachment: scroll;
-    }
-    #main-message {
-      background-attachment: inherit;
-      background-size: initial;
     }
     .hero-txt p {
       font-size: 20px;
@@ -382,19 +375,9 @@ ul#top-nav-list ul.m-menu ul a:hover {
     .hero-txt span {
       font-size: 44px;
     }
-    .btn {
-      font-size: 18px;
-      padding: 10px 20px;
-    }
     .cta-button {
       font-size: 16px;
     }
-}
-@media screen and (max-width: 981px){
-  #main-message {
-    background-attachment: initial;
-    background-size: initial;
-  }
 }
 
 /***------------------------------------------- Homepage Services -------------------------------------------***/
@@ -406,45 +389,34 @@ ul#top-nav-list ul.m-menu ul a:hover {
 .service-item {
     text-align: center;
     position: relative;
-}
-.service-item h2 {
-    font-size: 24px;
-    margin-top: 10px;
-    margin-bottom: 0;
-    color: <%= primaryBrightColor %>;
+    margin-bottom: 20px;
 }
 .service-item p {
-    font-size: 18px;
-    line-height: 24px;
+    margin-bottom: 0px;
 }
-.service-icons {
-  background-color: #efefef;
-  padding: 40px 0px 10px 0;
-  border-radius: 10px;
+.service-item p.service-title {
+    font-size: 24px;
+    margin: 10px auto;
+    color: <%= primaryBrightColor %>;
 }
-.service-icons a img {
+.service-item a img {
     border: solid 4px #fefefe;
     transition: box-shadow 200ms ease-out;
 }
-.service-icons a img:hover {
+.service-item a img:hover {
     box-shadow: 0 0px 0px 5px <%= primaryBrightColor %>;
 }
 @media screen and (max-width: 640px){
     #services {
         padding: 30px 0px;
     }
-    .service-item h2 {
+    .service-item p:not(.service-title) {
+        display: none;
+    }
+    .service-item p.service-title {
         font-size: 16px;
         margin-bottom: 0px;
     }
-    .service-item p {
-         display: none;
-    }
-}
-@media screen and (max-width: 768px){
-  .service-icons {
-    background-color: #fff;
-  }
 }
 /***--------------------------------------- Why Choose Us -------------------------------------***/
 
@@ -543,7 +515,6 @@ p.more-assets a:hover {
     text-decoration: underline !important;
 }
 
-
 /***--------------------------------------- Homepage Widget Content ------------------------------------------***/
 
 #widgets {
@@ -556,168 +527,14 @@ p.more-assets a:hover {
     text-decoration: underline;
 }
 
-#widget-slider .widget-item h3,
-#widget-slider .widget-item p {
-    margin: 20px 15px 0px;
-    color: ;
-    display: inline-block;
-}
-#widget-slider .widget-item .widget-img {
-    height: 375px;
-    position: relative;
-    margin: 10px auto;
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
-}
-#widget-slider .widget-item .widget-img img {
-    display: block;
-    margin: 0px auto;
-    position: absolute;
-    max-width: 500px;
-    max-height: 375px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
 #widget-slider .widget-item .widget-img span {
-    position: absolute;
-    z-index: 1;
-    color: #fff;
+    color: #fff !important;
     font: bold 20px/20px sans-serif;
-    background: <%= primaryDarkColor %>;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
-    padding: 10px 15px;
-    top: -10px;
-    left: -10px;
-    overflow: visible;
+    background: <%= primaryDarkColor %> !important;
 }
+
 #widget-slider .widget-item .widget-img span::after {
-    content: "";
-    display: block;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #333;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-}
-/* Slider arrow styles */
-
-button.slick-arrow {
-    background: transparent;
-    height: 50px;
-    width: 50px;
-    border-color: rgba(255, 255, 255, .5);
-    border-style: solid;
-    padding: 0px;
-    position: absolute;
-    z-index: 10;
-    -webkit-transform: translateY(-50%) rotate(45deg);
-    transform: translateY(-50%) rotate(45deg);
-    top: 35%;
-    transition: border-color .2s ease;
-    font-size: 0;
-    outline: none;
-}
-button.slick-arrow:hover {
-    border-color: rgba(255, 255, 255, .85);
-}
-button.slick-prev {
-    left: -30px;
-    border-width: 0px 0px 2px 2px;
-}
-button.slick-next {
-    right: -30px;
-    border-width: 2px 2px 0px 0px;
-}
-/*** Slick Slider Dots ***/
-/* Dots */
-
-.slick-slider {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-}
-.slick-dots {
-    position: absolute;
-    bottom: 15px;
-    margin: 0px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-.slick-dots li {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-}
-.slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-.slick-dots li button:hover,
-.slick-dots li button:focus {
-    outline: none;
-}
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
-    opacity: 1;
-}
-.slick-dots li button:before {
-    font-family: sans-serif;
-    font-size: 60px;
-    line-height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    content: '\2022';
-    text-align: center;
-    opacity: .25;
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.slick-dots li.slick-active button:before {
-    opacity: .75;
-    color: white;
-}
-@media screen and (max-width: 1150px){
-    button.slick-arrow {
-        top: 25%;
-        height: 30px;
-        width: 30px;
-    }
-    button.slick-prev {
-        left: 40px;
-    }
-    button.slick-next {
-        right: 40px;
-    }
-}
-@media screen and (max-width: 1024px){
-    #widget-slider .widget-item .widget-img {
-        height: 200px;
-    }
-    #widget-slider .widget-item .widget-img img {
-        max-width: 300px;
-        max-height: 200px;
-    }
+    border-right: 10px solid <%= primaryDarkColor %>;
 }
 
 /***------------------------------------------- Homepage Customer Reviews -------------------------------------------***/
@@ -728,83 +545,9 @@ button.slick-next {
     background-size: cover;
     padding: 60px 0px;
 }
-
-#customers #home-reviews {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-#customers .review_item {
-    margin: 0px 0px 20px 0px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
-    border-radius: 3px;
-    padding: 20px;
-    height: auto;
-    background-color: #fff;
-}
-@media screen and (min-width: 1025px) {
-    #customers .review_item {
-        height: 165px;
-    }
-}
-#customers .review_item .review_item_details {
-    font-size: 14px;
-    overflow: auto;
-    margin: 0px 0px 5px !important;
-    color: #8e8e8e;
-    float: none;
-    width: auto;
-    text-align: center;
-}
-#customers .small_review_stars_grouping {
-    overflow: auto;
-    margin: 0px auto;
-    width: auto;
-}
-#customers .review_item .wt-5587-starrfull {
-    background-image: url('/core/images/icons/star-filled-small-review.png');
-    width: 16px;
-    height: 16px;
-    margin: 0px 2px 0px 0px;
-    display: inline-block;
-}
-#customers .review_item .wt-5587-starrhalf {
-    background-image: url('/core/images/icons/star-half-small-review.png');
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-}
-#customers .wt-5587-starr.wt-5587-starrempty {
-    background: url('/core/images/icons/star-empty-small-review.png');
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-}
-#customers .review_item .review_customer {
-    padding-right: 5px;
-    margin: 0;
-    display: inline-block;
-}
-#customers .review_customer::after {
-    content: "from";
-    padding-left: 5px;
-}
-#customers .review_item .review_location_date {
-    display: inline-block;
-    margin: 0;
-}
-#customers .review_item .review_preview {
-    color: #359E6F;
-    font-size: 20px;
-    line-height: 1.2em;
-    font-style: italic;
-    padding: 0px;
-    overflow: hidden;
-    text-align: center;
-}
 #customers .review_item .review_preview a {
-    color: #156441;
+    color: <%= primaryDarkColor %>;
 }
-
 
 /***-------------------------------------- Homepage Features ------------------------------------------------***/
 #hp-features {
@@ -817,133 +560,11 @@ button.slick-next {
     margin: 10px auto;
 }
 
+/***-------------------------------------- Homepage Service Area --------------------------------------------***/
 
-/***------------------------------------------- Cred Bar -------------------------------------------***/
+ <%- fCity %>
 
-#cred {
-    box-sizing: border-box;
-    background: url('/core/images/templates/health/cred-bg.png') #666 no-repeat center top;
-    padding: 60px 0px 50px;
-}
-#cred .columns span {
-    height: 125px;
-    display: block;
-    position: relative;
-}
-#cred img {
-    /*opacity: 0.65;*/
-    max-height: 100%;
-    margin: 0px auto;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
-
-/***------------------------------------------- Service Area -------------------------------------------***/
-
-#service-area {
-    background-color: #E8E8E8;
-    padding: 60px 0px 60px;
-    position: relative;
-}
-#service-area::before {
-    content: "";
-    display: block;
-    background: url('/core/images/templates/bambam/images/dot-matrix-15.png');
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-}
-#service-area h2 {
-    color: #4c4c4c;
-    text-align: left;
-    margin-bottom: 15px;
-}
-/* Geo City List - new token */
-
-#service-area #home-city-list {
-    position: relative;
-    padding-bottom: 30px;
-}
-#home-city-list h3 {
-    color: #4c4c4c;
-    font: bold 20px sans-serif;
-}
-#home-city-list h3 a,
-.city_scroll_list a {
-    color: <%= primaryBrightColor %>;
-    text-decoration: underline;
-}
-.city_scroll_list_content {
-    height: 300px;
-    overflow-y: scroll;
-    margin-bottom: 20px;
-}
-.city_scroll_list {
-    list-style: none;
-    margin: 0px 20px 10px 0px;
-    line-height: 1.3em;
-}
-.city_scroll_list_title {
-    color: #4c4c4c;
-    margin-top: 15px;
-}
-.city_scroll_list_title:first-of-type {
-    margin-top: 0px;
-}
-.city_scroll_list li {
-    font: 14px/1.2em sans-serif;
-    color: <%= primaryDarkColor %>;
-    display: inline-block;
-}
-.city_scroll_list li:not(:last-of-type)::after {
-    content: ",";
-    margin-right: 3px;
-}
-.city_scroll_list_local_phone {
-    color: #999;
-    font-size: 12px;
-}
-#service-area .service-map {
-    background: url('/core/images/templates/des/usa-bg-light.png') no-repeat center;
-    background-size: contain;
-}
-.service-map img {
-    display: block;
-    margin: 0px auto;
-}
-#gmap-wrap {
-    width: 350px;
-    height: 350px;
-    margin: 30px auto;
-}
-#service-area #gmap-wrap > div {
-    border-radius: 50%;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, .25);
-}
-@media screen and (max-width: 1024px) {
-    #service-area .widget_map img {
-        margin: 0px auto;
-        float: none;
-    }
-}
-@media screen and (max-width: 640px) {
-    /* Service Area Page Map */
-    #content-wrap #gmap-wrap {
-        margin: 30px auto;
-        float: none;
-        width: 100%;
-        height: 350px;
-    }
-    #service-area #gmap-wrap {
-        width:275px;
-        height: 275px;
-    }
-}
-/**** Homepage content Media Queries ***/
+/***------------------------ Homepage content Media Queries --------------------------***/
 
 @media screen and (min-width: 1025px) {
     #customers #home-vid {
@@ -953,14 +574,12 @@ button.slick-next {
 }
 @media screen and (max-width: 1024px) {
     #home-vid,
-    #home-reviews,
-    #home-city-list {
+    #home-reviews {
         padding-left: 10px;
         padding-right: 10px;
     }
     #customers #home-vid,
-    #customers #home-reviews,
-    #service-area #home-city-list {
+    #customers #home-reviews {
         margin-bottom: 30px;
     }
 }
@@ -1059,8 +678,6 @@ button.slick-next {
 #subnav-left {
     position: relative;
     padding: 50px 20px 30px 20px;
-    background: linear-gradient(-90deg, rgb(234, 232, 232)0px, rgb(248, 248, 248) 15px);
-    border-right: 1px solid rgb(230, 230, 230);
 }
 @media screen and (max-width: 640px) {
     #subnav-left {
@@ -1088,6 +705,7 @@ button.slick-next {
     display: block;
 }
 #subnav-left ul li a:hover {
+    text-decoration: underline;
 }
 /* Top silo page link styles */
 
@@ -1171,15 +789,20 @@ button.slick-next {
     padding-top: 5px;
 }
 
-/* Hide subnav on free estimate page */
-
-.homepage-content + #subnav-left, .free-estimate + #subnav-left {
-    display: none;
-}
 /***------------------------------------------- Content -------------------------------------------***/
 
 .silo-page-wrap {}
 #page-wrap {}
+@media screen and (min-width: 641px){
+    #page-wrap > .row::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: linear-gradient(to left,rgb(230, 230, 230) 1px, rgb(234, 232, 232)1px, rgb(248, 248, 248) 15px);
+        height: 100%;
+        width: 24.9%;
+    }
+}
 @media screen and (max-width: 640px) {
     #page-wrap {
         padding: 20px 0 0;
@@ -1204,17 +827,7 @@ button.slick-next {
     margin: 0px 0px 30px 30px;
     float: right;
 }
-.inline-block {
-    /* Use this class for UL or OLs that get misaligned */
 
-    display: inline-block;
-}
-.display-table {
-    /* Use this class to center widgets and other misaligned block elements */
-
-    display: table;
-    margin: 20px auto !important;
-}
 a.button,
 a.arrow-button {
     background: <%= primaryBrightColor %>;
@@ -1260,8 +873,14 @@ a.arrow-button {
 .border > h3 {
     margin: 20px;
 }
-table.table.table-2-cell.drainage-systems strong {
-    display: block;
+
+/* Contact Form Colors */
+.contact_form .step.current .title {
+     background-color: <%= primaryDarkColor %>;
+}
+
+.contact_form button, input[type="submit"] {
+     background-color: <%= primaryBrightColor %>;
 }
 
 /* Tabbed interface */

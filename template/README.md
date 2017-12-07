@@ -1,3 +1,3 @@
-# spruce-template
+# Spruce Template Master Files
 
 ## SPRUCE

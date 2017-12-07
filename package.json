@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
     "express": "^5.0.0-alpha.2",
-    "nodegit": "^0.16.0",
     "fs-extra": "^0.30.0",
-    "ejs": "^2.5.2"
+    "nodegit": "^0.16.0",
+    "simple-git": "^1.84.0"
   },
   "engines": {
     "node": "6.11.1"
