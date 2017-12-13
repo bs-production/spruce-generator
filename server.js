@@ -37,11 +37,6 @@ app.get("/", function (request, response) {
 //Once you fill out the form start processing our data and making our files
 app.post('/', function(req, res){
 
-
-	
-//Use City Token	
-var cityBlock = '[[city_scroll:100]]';
-var cityList = fs.readFileSync('./template/partials/full-city-block.css', 'utf8');
 	
 //BBB Code 
 var bbbIn = req.body.BBB;
@@ -62,8 +57,6 @@ var html = compiled({
        mainMessageImage: req.body.mmImage,
        mainMessageText: req.body.mmText,
        mainMessageSubtext: req.body.mmSubText,
-  
-       cityBlock: cityBlock,
 	
        BBBcode: BBBcode,
 
@@ -81,7 +74,6 @@ var css = compiledCSS({
 	mainMessageImage: req.body.mainMessageImage,
 	primaryDarkColor: req.body.primaryDarkColor,
 	primaryBrightColor: req.body.primaryBrightColor,
-	fCity: cityList,
 });
 
 fs.writeFileSync("template.css", css);
