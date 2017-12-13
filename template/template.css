@@ -451,7 +451,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 #choose-us {
   background: #EEE;
   padding: 60px 0px;
-  background-image: url('');
+  background-image: url('<%- whyChooseImage %>');
   background-attachment: fixed;
   overflow: hidden;
   background-repeat: no-repeat;
