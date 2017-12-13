@@ -397,7 +397,38 @@
                   }
                   ?>
 
-                
+                     <?php if (($thePage == "index")) { ?>
+
+                    <div class="container" id="cred">
+                        <?php
+                              $meta = array();
+                                  $meta['useGeo'] = true;
+                                  $meta['manualAssetPage'] = false;
+                                  $meta['useFeatured'] = false;
+                                  $meta['siloMode'] = false;
+                                  $meta['qty'] = 20;
+                                  $meta['template'] = 5493;
+                              $templates = array();
+                              $templates['main'] = array('
+                                  <div class="row" id="inline-affil-slider">           
+                                    <%= BBBcode %>
+                                          [[items]]
+                                  </div>');
+                                $templates['item'] = array('
+                                  <div class="columns widget-item">
+                                      <div class="widget-affil-img">
+                                          [[logo]]
+                                      </div>
+                                  </div>');
+                              $title = 'Affiliations';
+                              require_once('widgets/affiliations_sidebar_widget.php');
+                              echo($output);
+                          ?>
+                    </div><!-- end credibility -->
+
+                    <?php
+                    }
+                    ?>       
         <div class="container home" id="footer">
             <div class="row" data-equalizer>
                 <div class="large-7 large-push-5 columns" data-equalizer-watch>
@@ -432,7 +463,33 @@
     </div>
 
  [[custom_core_v3_js]]
- 
+ <?php if (($thePage == "index")) { ?>
+
+    <script>
+        $('#inline-affil-slider').slick({
+            autoplay: true,
+            arrows: true,
+            infinite: true,
+            speed: 1000,
+            cssEase: 'ease',
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                breakpoint: 640,
+                settings: {
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+            });
+     </script>
+
+<?php
+}
+?>
  <script>
   $('#widget-slider').slick({
      autoplay: false,
