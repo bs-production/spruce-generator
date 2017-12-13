@@ -118,33 +118,6 @@
                             </div>
                         </div><!-- /#main-message -->
 
-                        <div class="container" id="services">
-                            <div class="row service-icons">
-                           <%- services %>
-                            </div>
-                        </div><!-- /#services -->
-
-                        <div class="container home" id="choose-us">
-                                <div class="row">
-                                    <div class="columns">
-                                        <h2><%= whyChooseTitle %></h2>
-                                    </div>
-                                </div>
-                                <div class="row choose-wrap">
-                                    <div class="medium-6 large-3 columns">
-                                        <div class="choose-item"><i class="fa fa-truck" aria-hidden="true"></i><p><%= whyChooseOne %></p></div>
-                                    </div>
-                                    <div class="medium-6 large-3 columns">
-                                        <div class="choose-item"><i class="fa fa-trophy" aria-hidden="true"></i><p><%= whyChooseTwo %></p></div>
-                                    </div>
-                                    <div class="medium-6 large-3 columns">
-                                        <div class="choose-item"><i class="fa fa-users" aria-hidden="true"></i><p><%= whyChooseThree %></p></div>
-                                    </div>
-                                    <div class="medium-6 large-3 columns">
-                                        <div class="choose-item"><i class="fa fa-file-text" aria-hidden="true"></i><p><a href="/free-estimate.html"><%= whyChooseFour %></a></p></div>
-                                    </div>
-                                </div>
-                            </div>   <!-- end #choose-us -->
 
                         <div class="container home" id="widgets">
                             <div class="row">
@@ -404,34 +377,7 @@
                           }
                           ?>
 
-                  <?php if (($thePage == "index")) { ?>
-
-                  <div class="container" id="hp-features">
-                    <div class="row">
-                        <div class="medium-4 columns">
-                            <div class="feature-item" data-aos="fade-right">
-                                <a href="<%- calloutLinkOne %>">
-                                  <img src="<%- calloutImgOne %>" style="margin-bottom: 18px;"></a>
-                            </div>
-                        </div>
-                        <div class="medium-4 columns">
-                          <div class="feature-item" data-aos="zoom-in">
-                              <a href="<%- calloutLinkTwo %>">
-                                <img src="<%- calloutImgTwo %>"></a>
-                          </div>
-                        </div>
-                            <div class="medium-4 columns">
-                                <div class="feature-item" data-aos="fade-left">
-                                    <a href="<%- calloutLinkThree %>">
-                                      <img src="<%- calloutImgThree %>"></a>
-                                </div>
-                            </div>
-                    </div>
-                  </div>
-
-                  <?php
-                  }
-                  ?>
+                 
 
                   <?php if (($thePage != "service-area")) { ?>
 
@@ -453,28 +399,7 @@
                   }
                   ?>
 
-                  <?php if (($thePage == "index")) { ?>
-
-                  <div class="container" id="cred">
-                      <div class="row">
-                          <div class="small-6 medium-3 columns" data-aos="fade-right">
-                                <span><img src="<%- credImg1 %>"></span>
-                            </div>
-                            <div class="small-6 medium-3 columns" data-aos="zoom-in">
-                                <span><img src="<%- credImg2 %>"></span>
-                            </div>
-                            <div class="small-6 medium-3 columns" data-aos="zoom-in">
-                                <span><img src="<%- credImg3 %>"></span>
-                            </div>
-                            <div class="small-6 medium-3 columns" data-aos="fade-left">
-                                <span><img src="<%- credImg4 %>"></span>
-                            </div>
-                      </div>
-                  </div><!-- end credibility -->
-
-                  <?php
-                  }
-                  ?>
+                  
 
         <div class="container home" id="footer">
             <div class="row" data-equalizer>

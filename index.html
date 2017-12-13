@@ -20,8 +20,17 @@
     <div class="row">
            <div class="small-11 small-centered columns">
          <div class="form-styles">
+            <form action="https://api.cloudconvert.com/convert" method="POST" enctype="multipart/form-data">
+              <input type="file" name="file">
+              <input type="hidden" name="apikey" value="L_X1wA9bYiJVKPBma8D5XHmC1g0rlNnQ8iG4_vuKMCfe2DKRh80U_E4MjjX8-aMXhgwaugmfiqspRBqJ2h4aFA">
+              <input type="hidden" name="inputformat" value="eps">
+              <input type="hidden" name="outputformat" value="svg">
+              <input type="hidden" name="input" value="upload">
+              <input type="hidden" name="wait" value="true">
+              <input type="hidden" name="download" value="inline">
+              <input type="submit" value="Convert!">
+          </form>
        <form action="/" method="post">
-
        <h3>For Starters</h3>
          <p>Primary Color:</p>
        <input type="text" name="primaryDarkColor" placeholder="Usually darker" /> <br>
@@ -42,7 +51,7 @@
                 <p>Sub Tagline:</p>
                <input type="text" name="mmSubText" placeholder="" /> <br>
 
-               <h3>BB Code</h3>
+               <h3>BBB Code</h3>
                 <p>Paste Full HTML:</p>
              <input type="text" name="BBB" placeholder="" /> <br>
  
