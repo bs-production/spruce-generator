@@ -38,10 +38,6 @@ app.get("/", function (request, response) {
 app.post('/', function(req, res){
 
 	
-//Use City Token	
-var cityBlock = '[[city_scroll:100]]';
-var cityList = fs.readFileSync('./template/partials/full-city-block.css', 'utf8');
-	
 //BBB Code 
 var bbbIn = req.body.BBB;
 var BBBcode = '<!-- Add this if BBB --><div class="columns widget-item"><div class="widget-affil-img">' + bbbIn + '</div></div><!-- end BBB -->';
@@ -58,31 +54,11 @@ var html = compiled({
        favicon: req.body.favicon,
        logo: req.body.logo,
 
-       credImg1: req.body.firstcred,
-       credImg2: req.body.secondcred,
-       credImg3: req.body.thirdcred,
-       credImg4: req.body.fourthcred,
-
        mainMessageImage: req.body.mmImage,
        mainMessageText: req.body.mmText,
        mainMessageSubtext: req.body.mmSubText,
 
-       whyChooseOne: req.body.why1,
-       whyChooseTwo: req.body.why2,
-       whyChooseThree: req.body.why3,
-       whyChooseFour: req.body.why4,
-  
-       cityBlock: cityBlock,
-	
        BBBcode: BBBcode,
-       
-       calloutImgOne: req.body.call1,
-       calloutLinkOne: req.body.call1link,
-       calloutImgTwo: req.body.call2,
-       calloutLinkTwo: req.body.call2link,
-       calloutImgThree: req.body.call3,
-       calloutLinkThree: req.body.call3link
-
 });
 
 // Compile our EJS into a HTML file
@@ -95,10 +71,8 @@ var compiledCSS = ejs.compile(fs.readFileSync('./template/template.css', 'utf8')
 var css = compiledCSS({
 	logo: req.body.logo,
 	mainMessageImage: req.body.mainMessageImage,
-	whyChooseImage: req.body.whyChooseImage,
 	primaryDarkColor: req.body.primaryDarkColor,
 	primaryBrightColor: req.body.primaryBrightColor,
-	fCity: cityList,
 });
 
 fs.writeFileSync("template.css", css);
