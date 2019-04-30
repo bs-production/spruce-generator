@@ -1,7 +1,7 @@
 Welcome to SPRUCE
 ============================
- 
-https://cyan-mitten.glitch.me/
+
+## These files now live on https://cyan-mitten.glitch.me/ for editing, etc.
 
 borders.html and template.css are the result of the processing in the generator  
 
