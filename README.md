@@ -1,9 +1,7 @@
 Welcome to SPRUCE
 ============================
  
- 
-\ ゜o゜)ノ https://sprucer.herokuapp.com/
-
+https://cyan-mitten.glitch.me/
 
 borders.html and template.css are the result of the processing in the generator  
 
